@@ -9,7 +9,7 @@
                             <a href="#">Dashboard</a>
                         </li>
 
-                        <li class="breadcrumb-item active" aria-current="page">article liste</li>
+                        <li class="breadcrumb-item active" aria-current="page"> listes des Categories</li>
                     </ol>
                 </nav>
             </div>
@@ -17,57 +17,63 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="grid">
-                            <p class="grid-header"> liste des articles</p>
+                            <p class="grid-header">Table la liste des categorie </p>
+
                             <div class="item-wrapper">
                                 <div class="table-responsive">
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
-                                            <th>Image</th>
-                                            <th>Nom</th>
-                                            <th>Categorie</th>
-                                            <th>prix</th>
-                                            <th>Description</th>
-                                            <th>Date de publication</th>
-                                            <th>action</th>
+                                            <th>id Categorie</th>
+
+                                            <th>Nom Categorie</th>
+                                            <th>Action1</th>
+
+
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        {% for posts in posts %}
+                                           {% for cat in cats %}
                                         <tr>
-                                            <td class="d-flex align-items-center border-top-0">
-                                                <img src="{{ asset('uploads/post/' ~ posts.image) }}" width="200px" height="300px"/>
+                                            <td >
+                                                {{ cat.id }}
 
                                             </td>
 
-                                            <td>{{ posts.nom }}</td>
-                                            <td>{{ posts.categorie.nomCategorie }}</td>
-                                            <td>{{ posts.prix }}</td>
-                                            <td>{{ posts.description|trim }}</td>
-                                            <td>{{ posts.date|date() }} </td>
+                                            <td>{{ cat.nomCategorie }}</td>
+
+
 
                                             <td class="actions">
-                                                <i class="mdi mdi-dots-vertical"><a href="{{path('deleteProduit',{'id': posts.id })}}"> <button>Delete</button></a> </i>
+                                                <i class="mdi mdi-dots-vertical"> <a href="{{path('deleteCat',{'id': cat.id })}}"> <button>Delete</button></a> <br></i>
+                                            <td>
+
                                             </td>
                                             <td class="actions">
-                                                <i class="mdi mdi-dots-vertical"><a href="{{path('editProduit',{'id': posts.id })}}"> <button>Edit</button></a> </i>
+                                                <i class="mdi mdi-dots-vertical"> <a href="{{path('editCat',{'id': cat.id })}}"> <button>Edit</button></a> <br></i>
+                                            <td>
+
+                                            </td>
                                             </td>
                                         </tr>
-                                        {% endfor %}
+                                           {% endfor %}
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- content viewport ends -->
         <!-- partial:../../partials/_footer.html -->
 
         <!-- partial -->
     </div>
     <!-- page content ends -->
-</div>
+    </div>
+
 {% endblock %}

@@ -1,0 +1,37 @@
+produit_homepage:
+    path:     /
+    defaults: { _controller: ProduitBundle:Default:index }
+
+addCat:
+    path:     /addCat
+    defaults: { _controller: ProduitBundle:Produit:addCat }
+
+ListCat:
+    path:     /ListCat
+    defaults: { _controller: ProduitBundle:Produit:ListCat }
+
+deleteCat:
+    path:     /deleteCat/{id}
+    defaults: { _controller: ProduitBundle:Produit:deleteCat }
+
+editCat:
+    path:     /editCat/{id}
+    defaults: { _controller: ProduitBundle:Produit:editCat }
+
+add:
+    path:     /add
+    defaults: { _controller: ProduitBundle:Produit:add }
+
+list:
+    path:     /list
+    defaults: { _controller: ProduitBundle:Produit:list }
+
+listBack:
+    path:     /listBack
+    defaults: { _controller: ProduitBundle:Produit:listBack }
+deleteProduit:
+    path:     /deleteProduit/{id}
+    defaults: { _controller: ProduitBundle:Produit:deleteProduit }
+editProduit:
+    path:     /editProduit/{id}
+    defaults: { _controller: ProduitBundle:Produit:editProduit }
