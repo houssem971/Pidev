@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Ouibike | Admin</title>
+
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href={{ asset('assets/vendors/iconfonts/mdi/css/materialdesignicons.css') }} />
+        <link rel="stylesheet" href={{ asset('assets/vendors/css/vendor.addons.css') }} />
+        <link rel="stylesheet" href={{ asset('assets/css/shared/style.css') }}/>
+        <link rel="stylesheet" href={{ asset('assets/css/demo_1/style.css') }}>
+
+    {% endblock %}
+</head>
+
+<body>
+<nav class="t-header">
+    <div class="t-header-brand-wrapper">
+        <a href="index.html">
+            <img class="logo" src={{ asset('assets/images/logo.png') }} alt="">
+        </a>
+    </div>
+    <div class="t-header-content-wrapper">
+        <div class="t-header-content">
+            <button class="t-header-toggler t-header-mobile-toggler d-block d-lg-none">
+                <i class="mdi mdi-menu"></i>
+            </button>
+            <form action="#" class="t-header-search-box">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search" autocomplete="on">
+                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-arrow-right-thick"></i></button>
+                </div>
+            </form>
+            <ul class="nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="notificationDropdown" data-toggle="dropdown" aria-expanded="false">
+                        <i class="mdi mdi-bell-outline mdi-1x"></i>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown dropdown-menu-right" aria-labelledby="notificationDropdown">
+                        <div class="dropdown-header">
+                            <h6 class="dropdown-title">Notifications</h6>
+
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- partial -->
+<div class="page-body">
+    <!-- partial:partials/_sidebar.html -->
+    <div class="sidebar">
+        <div class="user-profile">
+            <div class="display-avatar animated-avatar">
+                <img class="profile-img img-lg rounded-circle" src={{ asset('assets/images/profile/male/image_1.png') }}
+                >
+            </div>
+            <div class="info-wrapper">
+                <p class="user-name">                                        {{ '%username%'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                </p>
+
+            </div>
+        </div>
+        <ul class="navigation-menu">
+            <li class="nav-category-divider">MAIN</li>
+            <li>
+                <a href="index.html">
+                    <span class="link-title">Dashboard</span>
+                    <i class="mdi mdi-gauge link-icon"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#sample-pages" data-toggle="collapse" aria-expanded="false">
+                    <span class="link-title">Gestion De Blog</span>
+                    <i class="mdi mdi-flask link-icon"></i>
+                </a>
+                <ul class="collapse navigation-submenu" id="sample-pages">
+                    <li>
+                        <a href="{{ path('ajoutblog') }}">Ajouter Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('consulterblog') }}">Liste Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('vide') }}">statistique Blog</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#sample-pages" data-toggle="collapse" aria-expanded="false">
+                    <span class="link-title">Gestion Des Articles</span>
+                    <i class="mdi mdi-bullseye link-icon"></i>
+                </a>
+                <ul class="collapse navigation-submenu" id="sample-pages">
+
+                    <li>
+                        <a href="{{ path('consulterarticle') }}">Liste Article</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('vide') }}">statistique Article</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#sample-pages" data-toggle="collapse" aria-expanded="false">
+                    <span class="link-title">Gestion Des evenements</span>
+                    <i class="mdi mdi-bullseye link-icon"></i>
+                </a>
+                <ul class="collapse navigation-submenu" id="sample-pages">
+
+                    <li>
+                        <a href="{{ path('consultereve') }}">Liste evenements</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('ajouteve') }}">Ajouter evenements</a>
+                    </li>
+                    <li>
+                        <a href="">Statistique evenements</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#sample-pages" data-toggle="collapse" aria-expanded="false">
+                    <span class="link-title">Gestion Des Forums</span>
+                    <i class="mdi mdi-bullseye link-icon"></i>
+                </a>
+                <ul class="collapse navigation-submenu" id="sample-pages">
+
+                    <li>
+                        <a href="{{ path('consulterforum') }}">Liste Question</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ path('vide') }}">Statistique evenements</a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+
+
+        </ul>
+
+    </div>
+
+
+    {% block content %}
+
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    <script src={{ asset('assets/vendors/js/core.js') }}></script>
+
+    <script src={{ asset('assets/vendors/apexcharts/apexcharts.min.js') }}></script>
+    <script src={{ asset('assets/vendors/chartjs/Chart.min.js') }}></script>
+    <script src={{ asset('assets/js/charts/chartjs.addon.js') }}></script>
+
+
+    <script src={{ asset('assets/js/dashboard.js') }}></script>
+{% endblock %}
+</body>
+
+</html>

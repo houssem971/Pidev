@@ -1,0 +1,175 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+        <div class="page_header">
+
+        <div class="bcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="bcrumbs">
+                            <li><a href="#"><i class="fa fa-home"></i> Accueil</a></li>
+                            <li>BLog</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INNER CONTENT -->
+    <div class="inner-content">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <aside class="col-sm-3 ">
+                    <div class="side-widget space50">
+                        <h4>recherche...</h4>
+                        <form role="form" class="search-widget">
+                            <input class="form-control" type="text">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="side-widget space50">
+                        <h4>Categories</h4>
+                        <ul class="list-unstyled cat-list">
+                            <li> <a href="#">velo</a> <i class="icon-plus2"></i></li>
+                            <li> <a href="#">casque</a> <i class="icon-plus2"></i></li>
+                            <li> <a href="#">roue</a> <i class="icon-plus2"></i></li>
+                            <li> <a href="#">peedale</a> <i class="icon-plus2"></i></li>
+                            <li> <a href="#">piece de rechange</a> <i class="icon-plus2"></i></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="side-widget">
+                        <h4>Mot Clé</h4>
+                        <div class="tag-list">
+                            <a href="#">velo</a>
+                            <a href="#">bmx</a>
+                            <a href="#">bike</a>
+                            <a href="#">volant</a>
+                            <a href="#">sport</a>
+                            <a href="#">pedale</a>
+                            <a href="#">casque</a>
+
+                        </div>
+                    </div>
+                </aside>
+                <div class="col-md-9 blog-content">
+                    <article class="blogpost">
+                        <h2 class="post-title"><a href="#">Article Nom</a></h2>
+                        <div class="post-meta">
+                            <span><a href="#"><i class="icon-clock2"></i> 23 May</a></span>
+                            <span><a href="#"><i class="icon-user"></i> utulisateur</a></span>
+                            <span><i class="icon-archive3"></i> <a href=""></a>, <a href="#">type</a></span>
+                            <span><a href="#"><i class="icon-speech-bubble"></i> nbr Comments</a></span>
+                        </div>
+                        <div class="space30"></div>
+                        <!-- Media Gallery -->
+                        <div class="post-media">
+                            <div id="blog-slider" class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <img src="images/blog/1.JPG" class="img-responsive" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="images/blog/2.jpg" class="img-responsive" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="images/blog/3.jpg" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-excerpt">
+                            <p>Morbi interdum, lectus eget mattis vehicula, est nisi dapibus risus, a vestibulum
+                                enim leo sed velit. Etiam rhoncus dui quis tellus consectetur laoreet et a nulla.
+                                Suspendisse eleifend velit vitae lectus faucibus, vel consectetur magna
+                                pellentesque. Aliquam a efficitur ipsum.</p>
+                        </div>
+                        <a href="{{ path('blogd') }}" class="button btn-xs">Plus...&nbsp;&nbsp;<i
+                                    class="fa fa-angle-right"></i></a>
+                    </article>
+
+
+                    <div class="space50"></div>
+
+                    <!-- Pagination -->
+                    <div class="page_nav">
+                        <a href=""><i class="fa fa-angle-left"></i></a>
+                        <a href="" class="active">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a class="no-active">...</a>
+                        <a href="">9</a>
+                        <a href=""><i class="fa fa-angle-right"></i></a>
+                    </div>
+                    <!-- End Pagination -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- STYLE SWITCHER
+============================================= -->
+<div class="b-settings-panel">
+    <div class="settings-section">
+			<span>
+				Boxed
+			</span>
+        <div class="b-switch">
+            <div class="switch-handle"></div>
+        </div>
+        <span>
+				Wide
+			</span>
+    </div>
+    <hr class="dashed" style="margin: 15px 0px;">
+    <h5>Main Background</h5>
+    <div class="settings-section bg-list">
+        <div class="bg-pattern1"></div>
+        <div class="bg-pattern2"></div>
+        <div class="bg-pattern6"></div>
+        <div class="bg-pattern10"></div>
+        <div class="bg-pattern16"></div>
+        <div class="bg-pattern4"></div>
+        <div class="bg-pattern5"></div>
+        <div class="bg-pattern7"></div>
+        <div class="bg-pattern9"></div>
+        <div class="bg-pattern11"></div>
+        <div class="bg-pattern12"></div>
+        <div class="bg-pattern13"></div>
+        <div class="bg-pattern17"></div>
+        <div class="bg-pattern8"></div>
+        <div class="bg-pattern14"></div>
+        <div class="bg-pattern15"></div>
+        <div class="bg-pattern3"></div>
+        <div class="bg-pattern18"></div>
+    </div>
+    <hr class="dashed" style="margin: 15px 0px;">
+    <h5>Color Scheme</h5>
+    <div class="settings-section color-list">
+        <div data-src="css/color-scheme/moderate-green.css" style="background: #8ec249"></div>
+        <div data-src="css/color-scheme/vivid-blue.css" style="background: #228dff"></div>
+        <div data-src="css/color-scheme/orange.css" style="background: #fa6900"></div>
+        <div data-src="css/color-scheme/brown.css" style="background: #a68c69"></div>
+        <div data-src="css/color-scheme/yellow.css" style="background: #fabe28"></div>
+        <div data-src="css/color-scheme/violet.css" style="background: #ba01ff"></div>
+        <div data-src="css/color-scheme/strong-cyan.css" style="background: #00b9bd"></div>
+        <div data-src="css/color-scheme/soft-cyan.css" style="background: #4bd5ea"></div>
+        <div data-src="css/color-scheme/red.css" style="background: #ff0104"></div>
+        <div data-src="css/color-scheme/lite-brown.css" style="background: #f3a76d"></div>
+        <div data-src="css/color-scheme/lime-green.css" style="background: #3bdbad"></div>
+        <div data-src="css/color-scheme/light-voilet.css" style="background: #aaa5ff"></div>
+        <div data-src="css/color-scheme/gray-green.css" style="background: #697060"></div>
+        <div data-src="css/color-scheme/gray-cyan.css" style="background: #aeced2"></div>
+        <div data-src="css/color-scheme/de-green.css" style="background: #b6cd71"></div>
+        <div data-src="css/color-scheme/cream.css" style="background: #e0d6b2"></div>
+
+    </div>
+    <div class="btn-settings"></div>
+</div>
+	{% endblock %}

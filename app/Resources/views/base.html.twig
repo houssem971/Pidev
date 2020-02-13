@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Trend | Responsive Multipurpose Bootstrap Theme</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    {% block stylesheets %}
+
+
+        <link rel="stylesheet" href={{ asset('css/bootstrap.min.css') }} type="text/css">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href={{ asset('js/owl-carousel/owl.carousel.css') }}>
+        <link rel="stylesheet" href={{ asset('js/owl-carousel/owl.theme.css') }}>
+        <link rel="stylesheet" href={{ asset('js/owl-carousel/owl.transitions.css') }}>
+        <link rel="stylesheet" href={{ asset('js/rs-plugin/css/settings.css') }}>
+        <link rel="stylesheet" href={{ asset('js/flexslider/flexslider.css') }}>
+        <link rel="stylesheet" href={{ asset('js/isotope/isotope.css') }}>
+        <link rel="stylesheet" href={{ asset('css/jquery-ui.css') }}>
+        <link rel="stylesheet" href={{ asset('js/magnific-popup/magnific-popup.css') }}>
+        <link rel="stylesheet" href={{ asset('css/style.css') }}>
+
+        <!-- Google Fonts -->
+        <link
+                href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+                rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet'
+              type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet'
+              type='text/css'>
+
+
+        <link rel="stylesheet" href={{ asset('css/icomoon/style.css') }} type="text/css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css') }} type=" text/css"> <!-- SKIN -->
+        <link rel="stylesheet" href={{ asset('css/color-scheme/default-blue.css') }} type="text/css">
+    {% endblock %}
+</head>
+
+<body>
+<div class="outer-wrapper">
+
+    <!-- TOPBAR -->
+    <div id="top-bar" class="hidden-xs hidden-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <div class="nav-social-icons">
+                        <ul class="social-icons">
+
+                            <div class="top-login">
+
+
+
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                    {{ '%username%'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                                    <a href="{{ path('fos_user_security_logout') }}">
+                                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                                    </a>
+                                {% else %}
+                                    <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                                    <span>          |          </span>
+                                    <a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
+                                {% endif %}
+
+
+
+                            </div>
+
+                            <li class="facebook">
+                                <a href="http://facebook.com" target="_blank">
+                                    <i class="fa fa-facebook"></i><i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="http://twitter.com" target="_blank">
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+
+
+                            <li class="instagram">
+                                <a href="http://instagram.com" target="_blank">
+                                    <i class="fa fa-instagram"></i>
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="header-main">
+        <div class="container">
+            <div class="navbar yamm navbar-default">
+                <div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
+                            class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/basic/logo.png" width="90" height="70" alt="" />
+                </div>
+
+                <!-- CART / SEARCH -->
+                <div class="header-x pull-right">
+
+                    <div class="s-search">
+                        <div class="ss-trigger"><i class="icon-search2"></i></div>
+                        <div class="ss-content">
+                            <span class="ss-close icon-cross2"></span>
+                            <div class="ssc-inner">
+                                <form>
+                                    <input type="text" placeholder="recherche...">
+                                    <button type="submit"><i class="icon-search2"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown yamm-fw">
+                            <a href="{{ path('homepage') }}">
+                                Accueil
+
+                            </a>
+
+                        </li>
+                        <li class=" dropdown yamm-fw">
+                            <a href="{{ path('blog') }}">
+                                Blog
+                            </a>
+                        </li>
+                        <li class=" dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                Article
+                                <div class="arrow-up"><i class="fa fa-angle-down"></i></div>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-submenu">
+                                    <a href="{{ path('articledep') }}">Déposer Article </a>
+                                    <ul class="dropdown-menu">
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="{{ path('article') }}">Consulter Article</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=" dropdown yamm-fw">
+                            <a href="{{ path('eve') }}">
+                                événement
+                            </a>
+                        </li>
+
+                        <li class=" dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                Forum
+                                <div class="arrow-up"><i class="fa fa-angle-down"></i></div>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+
+                                <li class="dropdown-submenu">
+                                    <a href="{{ path('faq') }}">
+                                        Consulter Forum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=" dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                registre
+                                <div class="arrow-up"><i class="fa fa-angle-down"></i></div>
+                            </a>
+
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                A propos
+                                <div class="arrow-up"><i class="fa fa-angle-down"></i></div>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+
+<!-- jQuery -->
+<script src={{ asset('js/jquery.js') }}></script>
+
+<!-- Plugins -->
+<script src={{ asset('js/bootstrap.min.js') }}></script>
+<script src={{ asset('js/menu.js') }}></script>
+<script src={{ asset('js/owl-carousel/owl.carousel.min.js') }}></script>
+<script src={{ asset('js/rs-plugin/js/jquery.themepunch.tools.min.js') }}></script>
+<script src={{ asset('js/rs-plugin/js/jquery.themepunch.revolution.min.js') }}></script>
+<script src={{ asset('js/jquery.easing.min.js') }}></script>
+<script src={{ asset('js/isotope/isotope.pkgd.js') }}></script>
+<script src={{ asset('js/jflickrfeed.min.js') }}></script>
+<script src={{ asset('js/tweecool.js') }}></script>
+<script src={{ asset('js/flexslider/jquery.flexslider.js') }}></script>
+<script src={{ asset('js/easypie/jquery.easypiechart.min.js') }}></script>
+<script src={{ asset('js/jquery-ui.js') }}></script>
+<script src={{ asset('js/jquery.appear.js') }}></script>
+<script src={{ asset('js/jquery.inview.js') }}></script>
+<script src={{ asset('js/jquery.countdown.min.js') }}></script>
+<script src={{ asset('js/jquery.sticky.js') }}></script>
+<script src={{ asset('js/magnific-popup/jquery.magnific-popup.min.js') }}></script>
+
+<script src={{ asset('js/main.js') }}></script"></script>
+{% endblock %}
+</body>
+
+</html>

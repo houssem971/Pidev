@@ -1,0 +1,351 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+        <div class="page_header">
+
+        <div class="bcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="bcrumbs">
+                            <li><a href="#"><i class="fa fa-home"></i> Article detail</a></li>
+
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOP CONTENT -->
+    <div class="shop-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 shop-sidebar">
+                    <div class="widget widget_product_categories">
+                        <h3>Product Categories</h3>
+                        <div class="clearfix"></div>
+                        <ul class="product-categories">
+                            <li><i class="icon-circle-plus"></i> <a href="#">Classic</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">Jacket</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">Shirts</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">Posters</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">Leather</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">Shoes</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h3>Price Filter</h3>
+                        <div class="s_range">
+                            <div id="sliderRange"></div>
+                            <div class="range_v">
+                                <span>Price:</span>
+                                <input type="text" id="price1" name="price1" title="" value="$75" class="input" />
+                                <div class="range_sep"></div>
+                                <input type="text" id="price2" name="price2" title="" value="$300" class="input" />
+                            </div>
+                        </div>
+                        <a class="filter-btn button btn-small" href="#">Filter</a>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+                <div class="col-md-9" id="p-single">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="gal-wrap">
+                                <div id="gal-slider" class="flexslider">
+                                    <ul class="slides">
+                                        <li><img src="images/shop/1.jpg" class="img-responsive" alt="" /></li>
+                                        <li><img src="images/shop/2.jpg" class="img-responsive" alt="" /></li>
+                                        <li><img src="images/shop/3.jpg" class="img-responsive" alt="" /></li>
+                                        <li><img src="images/shop/4.jpg" class="img-responsive" alt="" /></li>
+                                    </ul>
+                                </div>
+                                <ul class="gal-nav">
+                                    <li>
+                                        <div>
+                                            <img src="images/shop/1.jpg" class="img-responsive" alt="" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="images/shop/2.jpg" class="img-responsive" alt="" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="images/shop/3.jpg" class="img-responsive" alt="" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="images/shop/4.jpg" class="img-responsive" alt="" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7 product-single">
+                            <h2 class="uppercase no-margin">Green Army Jacket</h2>
+                            <div class="space10"></div>
+                            <div class="p-price">$199.99</div>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                suffered alteration. There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration.</p>
+                            <div class="product-quantity">
+                                <span>Quantity:</span>
+                                <form>
+                                    <input type="text" placeholder="1">
+                                </form>
+                            </div>
+                            <div class="shop-btn-wrap">
+                                <a href="#" class="button btn-small">Add to Cart</a>
+                            </div>
+                            <div class="product-meta">
+									<span>Categories: <a href="#">bag</a>, <a href="#">black</a>, <a href="#">darck</a>,
+										<a href="#">sport</a>, <a href="#">ewuipment</a></span><br>
+                                <span>Tags: <a href="#">point</a>, <a href="#">size</a>, <a href="#">bike</a>, <a
+                                            href="#">bag</a>, <a href="#">black</a>, <a href="#">darck</a>, <a
+                                            href="#">sport</a>, <a href="#">ewuipment</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix space40"></div>
+                    <div class="tab-style3">
+                        <!-- Nav Tabs -->
+                        <div class="align-center mb-40 mb-xs-30">
+                            <ul class="nav nav-tabs tpl-minimal-tabs animate">
+                                <li class="active col-md-4">
+                                    <a aria-expanded="true" href="#mini-one" data-toggle="tab">Overview</a>
+                                </li>
+                                <li class="col-md-4">
+                                    <a aria-expanded="false" href="#mini-two" data-toggle="tab">Product Info</a>
+                                </li>
+                                <li class="col-md-4">
+                                    <a aria-expanded="false" href="#mini-three" data-toggle="tab">Reviews</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Nav Tabs -->
+                        <!-- Tab panes -->
+                        <div style="height: auto;"
+                             class="tab-content tpl-minimal-tabs-cont align-center section-text">
+                            <div style="" class="tab-pane fade active in" id="mini-one">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority
+                                    have suffered alteration. There are many variations of passages of Lorem Ipsum
+                                    available, but the majority have suffered alteration.</p>
+                                <table class="table tba2">
+                                    <tbody>
+                                    <tr>
+                                        <td>Sizes</td>
+                                        <td>M, L, XL, XXL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prodused in</td>
+                                        <td>USA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Material</td>
+                                        <td>plastic, textile</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="" class="tab-pane fade" id="mini-two">
+                                <table class="table tba2">
+                                    <tbody>
+                                    <tr>
+                                        <td>Sizes</td>
+                                        <td>M, L, XL, XXL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prodused in</td>
+                                        <td>USA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Material</td>
+                                        <td>plastic, textile</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colors</td>
+                                        <td>red, black, grey</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dimension</td>
+                                        <td>20x40x33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type</td>
+                                        <td>bag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weight</td>
+                                        <td>0.35kg</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="" class="tab-pane fade" id="mini-three">
+                                <div class="col-md-12">
+                                    <h4 class="uppercase space30">3 Reviews for Green Army Jacket</h4>
+                                    <ul class="comment-list">
+                                        <li>
+                                            <a class="pull-left" href="#"><img class="comment-avatar"
+                                                                               src="images/quote/1.jpg" alt="" height="50" width="50"></a>
+                                            <div class="comment-meta">
+                                                <a href="#">John Doe</a>
+                                                <span>
+														<em>Feb 17, 2015, at 11:34</em>
+													</span>
+                                            </div>
+                                            <div class="rating2">
+                                                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor
+                                                sit amet urna nec tempor. Nullam pellentesque in orci in luctus. Sed
+                                                convallis tempor tellus a faucibus. Suspendisse et quam eu velit
+                                                commodo tempus.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="pull-left" href="#"><img class="comment-avatar"
+                                                                               src="images/quote/2.jpg" alt="" height="50" width="50"></a>
+                                            <div class="comment-meta">
+                                                <a href="#">Rebecca</a>
+                                                <span>
+														<em>March 08, 2015, at 03:34</em>
+													</span>
+                                            </div>
+                                            <div class="rating2">
+                                                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor
+                                                sit amet urna nec tempor. Nullam pellentesque in orci in luctus. Sed
+                                                convallis tempor tellus a faucibus. Suspendisse et quam eu velit
+                                                commodo tempus.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="pull-left" href="#"><img class="comment-avatar"
+                                                                               src="images/quote/1.jpg" alt="" height="50" width="50"></a>
+                                            <div class="comment-meta">
+                                                <a href="#">Antony Doe</a>
+                                                <span>
+														<em>June 11, 2015, at 07:34</em>
+													</span>
+                                            </div>
+                                            <div class="rating2">
+                                                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor
+                                                sit amet urna nec tempor. Nullam pellentesque in orci in luctus. Sed
+                                                convallis tempor tellus a faucibus. Suspendisse et quam eu velit
+                                                commodo tempus.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <h4 class="uppercase space30">Add a review</h4>
+                                    <form method="post" action="#" id="form" role="form" class="form">
+                                        <div class="row">
+                                            <div class="col-md-6 space20">
+                                                <input name="name" id="name" class="input-md form-control"
+                                                       placeholder="Name *" maxlength="100" required="" type="text">
+                                            </div>
+                                            <div class="col-md-6 space20">
+                                                <input name="email" id="email" class="input-md form-control"
+                                                       placeholder="Email *" maxlength="100" required="" type="email">
+                                            </div>
+                                        </div>
+                                        <div class="space20">
+                                            <span>Your Ratings</span>
+                                            <div class="clearfix"></div>
+                                            <div class="rating">
+                                                <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
+                                            </div>
+                                            <div class="clearfix space20"></div>
+                                        </div>
+                                        <div class="space20">
+												<textarea name="text" id="text" class="input-md form-control" rows="6"
+                                                          placeholder="Add review.." maxlength="400"></textarea>
+                                        </div>
+                                        <button type="submit" class="button btn-small">
+                                            Submit Review
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="clearfix space20"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- STYLE SWITCHER
+============================================= -->
+<div class="b-settings-panel">
+    <div class="settings-section">
+			<span>
+				Boxed
+			</span>
+        <div class="b-switch">
+            <div class="switch-handle"></div>
+        </div>
+        <span>
+				Wide
+			</span>
+    </div>
+    <hr class="dashed" style="margin: 15px 0px;">
+    <h5>Main Background</h5>
+    <div class="settings-section bg-list">
+        <div class="bg-pattern1"></div>
+        <div class="bg-pattern2"></div>
+        <div class="bg-pattern6"></div>
+        <div class="bg-pattern10"></div>
+        <div class="bg-pattern16"></div>
+        <div class="bg-pattern4"></div>
+        <div class="bg-pattern5"></div>
+        <div class="bg-pattern7"></div>
+        <div class="bg-pattern9"></div>
+        <div class="bg-pattern11"></div>
+        <div class="bg-pattern12"></div>
+        <div class="bg-pattern13"></div>
+        <div class="bg-pattern17"></div>
+        <div class="bg-pattern8"></div>
+        <div class="bg-pattern14"></div>
+        <div class="bg-pattern15"></div>
+        <div class="bg-pattern3"></div>
+        <div class="bg-pattern18"></div>
+    </div>
+    <hr class="dashed" style="margin: 15px 0px;">
+    <h5>Color Scheme</h5>
+    <div class="settings-section color-list">
+        <div data-src="css/color-scheme/moderate-green.css" style="background: #8ec249"></div>
+        <div data-src="css/color-scheme/vivid-blue.css" style="background: #228dff"></div>
+        <div data-src="css/color-scheme/orange.css" style="background: #fa6900"></div>
+        <div data-src="css/color-scheme/brown.css" style="background: #a68c69"></div>
+        <div data-src="css/color-scheme/yellow.css" style="background: #fabe28"></div>
+        <div data-src="css/color-scheme/violet.css" style="background: #ba01ff"></div>
+        <div data-src="css/color-scheme/strong-cyan.css" style="background: #00b9bd"></div>
+        <div data-src="css/color-scheme/soft-cyan.css" style="background: #4bd5ea"></div>
+        <div data-src="css/color-scheme/red.css" style="background: #ff0104"></div>
+        <div data-src="css/color-scheme/lite-brown.css" style="background: #f3a76d"></div>
+        <div data-src="css/color-scheme/lime-green.css" style="background: #3bdbad"></div>
+        <div data-src="css/color-scheme/light-voilet.css" style="background: #aaa5ff"></div>
+        <div data-src="css/color-scheme/gray-green.css" style="background: #697060"></div>
+        <div data-src="css/color-scheme/gray-cyan.css" style="background: #aeced2"></div>
+        <div data-src="css/color-scheme/de-green.css" style="background: #b6cd71"></div>
+        <div data-src="css/color-scheme/cream.css" style="background: #e0d6b2"></div>
+
+    </div>
+    <div class="btn-settings"></div>
+</div>
+{% endblock %}

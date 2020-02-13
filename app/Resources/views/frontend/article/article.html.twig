@@ -1,0 +1,228 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <!-- PAGE HEADER -->
+    <div class="page_header">
+
+        <div class="bcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="bcrumbs">
+                            <li><a href="#"><i class="fa fa-home"></i> Article</a></li>
+
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOP CONTENT -->
+    <div class="shop-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 shop-sidebar">
+                    <div class="widget widget_product_categories">
+                        <h3>Product Categories</h3>
+                        <div class="clearfix"></div>
+                        <ul class="product-categories">
+                            <li><i class="icon-circle-plus"></i> <a href="#">velo</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">volant</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">roue</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">pedale</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">piece de rechange</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h3>Price Filter</h3>
+                        <div class="s_range">
+                            <div id="sliderRange"></div>
+                            <div class="range_v">
+                                <span>Price:</span>
+                                <input type="text" id="price1" name="price1" title="" value="75 DT" class="input" />
+                                <div class="range_sep"></div>
+                                <input type="text" id="price2" name="price2" title="" value="300DT" class="input" />
+                            </div>
+                        </div>
+                        <a class="filter-btn button btn-small" href="#">Filter</a>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="sorter">
+                            <div class="col-md-5">
+                                <div class="sort1">
+                                    <span>Sort by:</span>
+                                    <select class="custom">
+                                        <option value="">Popularity</option>
+                                        <option value="">Latest</option>
+                                        <option value="">Best sellers</option>
+                                        <option value="">Price Low to High</option>
+                                        <option value="">Price High to Low</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="layout-modes">
+                                    Page 1 of 6
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="sort2">
+                                    <span class="span1">Show:</span>
+                                    <select class="custom">
+                                        <option value="">12</option>
+                                        <option value="">20</option>
+                                        <option value="">50</option>
+                                        <option value="">100</option>
+                                    </select>
+                                    <span class="span2">per page</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="shop-grid">
+                        <li>
+                            <div class="product">
+                                <div class="text-center">
+                                    <div class="product-thumbnail">
+                                        <img src="images/shop/1.jpg" class="img-responsive" alt="" />
+                                        <div class="product-overlay">
+                                            <a class="product-overlay-link" href="#"><i
+                                                        class="fa fa-search-plus"></i></a>
+
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title"><a href="#">Grey jacket</a></h3>
+                                    <span class="product-price"> 69.99</span>
+                                    <a href="{{ path('articledetail') }}"
+                                       class="button btn-md btn-radius btn-center color2 btn-radius add_to_cart_button">
+                                        plus...</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product">
+                                <span class="badge blue"><span>50%</span><br>Off</span>
+                                <div class="text-center">
+                                    <div class="product-thumbnail">
+                                        <img src="images/shop/2.jpg" class="img-responsive" alt="" />
+                                        <div class="product-overlay">
+                                            <a class="product-overlay-link" href="#"><i
+                                                        class="fa fa-search-plus"></i></a>
+
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title"><a href="#">Leather bag</a></h3>
+                                    <span class="product-price"> 119.99</span>
+                                    <a href="{{ path('articledetail') }}"
+                                       class="button btn-md btn-radius btn-center color2 btn-radius add_to_cart_button">pluss
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product">
+                                <div class="text-center">
+                                    <div class="product-thumbnail">
+                                        <img src="images/shop/3.jpg" class="img-responsive" alt="" />
+                                        <div class="product-overlay">
+                                            <a class="product-overlay-link" href="#"><i
+                                                        class="fa fa-search-plus"></i></a>
+                                            <a class="product-overlay-cart" href="#"><i class="fa fa-like"></i></a>
+                                        </div>
+                                    </div>
+                                    <h3 class="product-title"><a href="#">pedale en acier</a></h3>
+                                    <span class="product-price"> 39.99</span>
+                                    <a href="{{ path('articledetail') }}"
+                                       class="button btn-md btn-radius btn-center color2 btn-radius add_to_cart_button">plus...
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <div class="row">
+                        <div class="sorter">
+                            <div class="col-md-12">
+                                <ul class="shop_pn">
+                                    <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                    <li><a class="active" href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- STYLE SWITCHER
+============================================= -->
+    <div class="b-settings-panel">
+        <div class="settings-section">
+				<span>
+					Boxed
+				</span>
+            <div class="b-switch">
+                <div class="switch-handle"></div>
+            </div>
+            <span>
+					Wide
+				</span>
+        </div>
+        <hr class="dashed" style="margin: 15px 0px;">
+        <h5>Main Background</h5>
+        <div class="settings-section bg-list">
+            <div class="bg-pattern1"></div>
+            <div class="bg-pattern2"></div>
+            <div class="bg-pattern6"></div>
+            <div class="bg-pattern10"></div>
+            <div class="bg-pattern16"></div>
+            <div class="bg-pattern4"></div>
+            <div class="bg-pattern5"></div>
+            <div class="bg-pattern7"></div>
+            <div class="bg-pattern9"></div>
+            <div class="bg-pattern11"></div>
+            <div class="bg-pattern12"></div>
+            <div class="bg-pattern13"></div>
+            <div class="bg-pattern17"></div>
+            <div class="bg-pattern8"></div>
+            <div class="bg-pattern14"></div>
+            <div class="bg-pattern15"></div>
+            <div class="bg-pattern3"></div>
+            <div class="bg-pattern18"></div>
+        </div>
+        <hr class="dashed" style="margin: 15px 0px;">
+        <h5>Color Scheme</h5>
+        <div class="settings-section color-list">
+            <div data-src="css/color-scheme/moderate-green.css" style="background: #8ec249"></div>
+            <div data-src="css/color-scheme/vivid-blue.css" style="background: #228dff"></div>
+            <div data-src="css/color-scheme/orange.css" style="background: #fa6900"></div>
+            <div data-src="css/color-scheme/brown.css" style="background: #a68c69"></div>
+            <div data-src="css/color-scheme/yellow.css" style="background: #fabe28"></div>
+            <div data-src="css/color-scheme/violet.css" style="background: #ba01ff"></div>
+            <div data-src="css/color-scheme/strong-cyan.css" style="background: #00b9bd"></div>
+            <div data-src="css/color-scheme/soft-cyan.css" style="background: #4bd5ea"></div>
+            <div data-src="css/color-scheme/red.css" style="background: #ff0104"></div>
+            <div data-src="css/color-scheme/lite-brown.css" style="background: #f3a76d"></div>
+            <div data-src="css/color-scheme/lime-green.css" style="background: #3bdbad"></div>
+            <div data-src="css/color-scheme/light-voilet.css" style="background: #aaa5ff"></div>
+            <div data-src="css/color-scheme/gray-green.css" style="background: #697060"></div>
+            <div data-src="css/color-scheme/gray-cyan.css" style="background: #aeced2"></div>
+            <div data-src="css/color-scheme/de-green.css" style="background: #b6cd71"></div>
+            <div data-src="css/color-scheme/cream.css" style="background: #e0d6b2"></div>
+
+        </div>
+        <div class="btn-settings"></div>
+    </div>
+    {% endblock %}

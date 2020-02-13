@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <!-- PAGE HEADER -->
+    <div class="page_header">
+
+        <div class="bcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="bcrumbs">
+                            <li><a href="#"><i class="fa fa-user"></i> login / registre</a></li>
+
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="inner-content">
+    <div class="container">
+    <div class="row shop-login">
+    <div class="col-md-6">
+    <div class="box-content">
+    <h4 class="uppercase text-center">Connexion</h4>
+    <div class="clearfix space40"></div>
+
+    <div>
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+     </div>
+    </div>
+    </div>
+        <div class="col-md-6">
+            <div>
+                <img src="images/basic/logo.png" >
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+{% endblock %}
