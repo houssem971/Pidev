@@ -1,0 +1,61 @@
+{% extends 'base2.html.twig' %}
+{% block content %}
+    <div class="page-content-wrapper">
+        <div class="page-content-wrapper-inner">
+            <div class="viewport-header">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb has-arrow">
+                        <li class="breadcrumb-item">
+                            <a href="#">Dashboard</a>
+                        </li>
+
+                        <li class="breadcrumb-item active" aria-current="page">blog liste</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="content-viewport">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="grid">
+                            <p class="grid-header">Table de liste de blog</p>
+                            <div class="item-wrapper">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" >
+                                        <thead>
+                                        <tr>
+
+
+                                            <th>Nom</th>
+
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for a in categorie %}
+                                            <tr>
+
+
+                                                <td> {{ a.nom }}</td>
+
+
+                                                <td><a href="{{ path('suppcat',{'id':a.id}) }}"><button class="btn btn-danger">supimer</button></a></td>
+
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content viewport ends -->
+        <!-- partial:../../partials/_footer.html -->
+
+        <!-- partial -->
+    </div>
+    <!-- page content ends -->
+    </div>
+{% endblock %}
