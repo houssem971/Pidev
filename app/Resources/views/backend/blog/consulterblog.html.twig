@@ -20,39 +20,47 @@
                             <p class="grid-header">Table de liste de blog</p>
                             <div class="item-wrapper">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
+                                    <table class="table table-hover" >
                                         <thead>
                                         <tr>
                                             <th>Image</th>
+
                                             <th>Nom</th>
                                             <th>Description</th>
-                                            <th>Mot cle</th>
                                             <th>Categorie</th>
-                                            <th>Nb j'aime</th>
-                                            <th>Nb comment</th>
                                             <th>Date de publication</th>
+                                            <th>Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        {% for a in blog %}
                                         <tr>
                                             <td class="d-flex align-items-center border-top-0">
                                                 <img class="profile-img img-sm img-rounded mr-2"
-                                                     src="assets/images/profile/male/image_5.png">
+                                                <img src="{{ asset('uploads/images/' ~ a.image1) }}">
+
+                                            </td>
+                                            <td class="d-flex align-items-center border-top-0">
+                                                <img class="profile-img img-sm img-rounded mr-2"
+                                                <img src="{{ asset('uploads/images/' ~ a.image2) }}">
+
+                                            </td>
+                                            <td class="d-flex align-items-center border-top-0">
+                                                <img class="profile-img img-sm img-rounded mr-2"
+                                                <img src="{{ asset('uploads/images/' ~ a.image3) }}">
 
                                             </td>
 
-                                            <td>Velo electrique</td>
-                                            <td>joli velo</td>
-                                            <td>bike</td>
-                                            <td> electrique
-                                            </td>
-                                            <td> 17 </td>
-                                            <td> 12 </td>
-                                            <td>Jar 23, 2019 </td>
-                                            <td class="actions">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </td>
+                                            <td> {{ a.nom }}</td>
+                                            <td> {{ a.description }}</td>
+                                            <td> {{ a.categorie }}</td>
+
+                                            <td> {{ a.dateAjout | date('m/d/y')}} </td>
+
+                                            <td><a href="{{ path('supp',{'id':a.id}) }}"><button class="btn btn-danger">supimer</button></a></td>
+
                                         </tr>
+                                        {% endfor %}
                                         </tbody>
                                     </table>
                                 </div>

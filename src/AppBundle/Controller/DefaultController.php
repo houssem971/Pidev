@@ -61,9 +61,9 @@ class DefaultController extends Controller
     }
 
 
-    /**
-     * @Route("/evenement", name="eve")
-     */
+        /**
+         * @Route("/evenement", name="eve")
+         */
     public function evenementAction()
     {
         // replace this example code with whatever you need
@@ -83,7 +83,7 @@ class DefaultController extends Controller
     public function faqAction()
     {
         // replace this example code with whatever you need
-        return $this->render('/frontend/faq.html.twig');
+        return $this->render('/frontend/forum/faq.html.twig');
     }
     /**
      * @Route("/admin", name="adminlogin")
@@ -101,22 +101,7 @@ class DefaultController extends Controller
         // replace this example code with whatever you need
         return $this->render('/backend/adminindex.html.twig');
     }
-    /**
-     * @Route("/admin/ajoutblog", name="ajoutblog")
-     */
-    public function ajoutblogAction()
-    {
-        // replace this example code with whatever you need
-        return $this->render('/backend/blog/ajoutblog.html.twig');
-    }
-    /**
-     * @Route("/admin/consulterblog", name="consulterblog")
-     */
-    public function consulterblogAction()
-    {
-        // replace this example code with whatever you need
-        return $this->render('/backend/blog/consulterblog.html.twig');
-    }
+
     /**
      * @Route("/admin/consulterarticle", name="consulterarticle")
      */
