@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d77507c8-3cc8-4ef9-b80e-8799564f0fa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/blog/consulterblog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/blog/consulterblog.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blogdetail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blogdetail.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/houssemBundle/Controller/blogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Controller/blogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/houssemBundle/Repository/reactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Repository/reactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +185,7 @@
       <workItem from="1582192130127" duration="1375000" />
       <workItem from="1582196723865" duration="3414000" />
       <workItem from="1582202272853" duration="2057000" />
-      <workItem from="1582211995979" duration="1284000" />
+      <workItem from="1582211995979" duration="19099000" />
     </task>
     <servers />
   </component>

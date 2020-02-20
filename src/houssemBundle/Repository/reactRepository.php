@@ -25,6 +25,17 @@ class reactRepository extends \Doctrine\ORM\EntityRepository
 
       return $Query->getSingleResult();
     }
+
+    public function findbyreacts($id)
+    {
+        $Query=$this->getEntityManager()->createQuery(
+            "SELECT c.reaction
+             FROM houssemBundle:react as c
+             WHERE c.idblog = $id"
+        )->setMaxResults(1) ;
+
+        return $Query->getArrayResult();
+    }
     public function findbyreaction($id)
     {
         $Query=$this->getEntityManager()->createQuery(

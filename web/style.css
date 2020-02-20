@@ -67,78 +67,14 @@
     animation: loading 1s linear infinite forwards;
     position: relative;
 }
-.container {
-    padding: 18px 18px 0 18px;
-    background: #fff;
-    position: relative;
-}
-.up {
-    position: relative;
-}
-.info {
-    overflow: hidden;
-}
-.info a:hover {
-    text-decoration: underline;
-}
+
+
 
 .lke:before {
     color: #5890ff;
     font-weight: bold
 }
-.info .avatar{
-    margin-right: 8px;
-    cursor: pointer;
-    float: left;
-    border-radius: 50%;
-    position: relative;
-}
-.info .avatar:before{
-    content: '';
-    background-color: #42b72a;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    height: 9px;
-    left: 76%;
-    position: absolute;
-    top: 68%;
-    width: 9px;
-    z-index: 1;
-}
 
-
-.info .time {
-    font-weight: 400;
-    margin-right: 7px;
-    color: #90949c;
-}
-.info .user {
-    color: #365899;
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: inline-block
-
-}
-.info .ca {
-    display: block;
-    color: #90949c;
-    font-size: 14px;
-}
-.status{
-    color: #c8c8c8
-}
-.status-feeling{
-    background-image: url(https://goo.gl/rYfPa2);
-    background-size: 18px 72px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    background-position: 0 -36px;
-    margin-right: 3px;
-    vertical-align: -2.9px;
-
-}
 .up p{
     font-size: 14px;
     font-weight: normal;
@@ -162,40 +98,14 @@
 .dots:hover {
     background-position: -22px -132px;
 }
-.list {
-    position: absolute;
-    right: 0;
-    top: 11%;
-    z-index: 3;
-    background: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 3px;
-    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
-    display: none;
-}
-.list ul, .share-li {
-    list-style: none;
-    margin: 0;
-    padding: 5px 0;
-}
+
 .seprator{
     border-bottom: 1px solid #e9ebee;
     margin: 5px 7px 6px;
     padding-top: 1px;
 }
-.list ul li a, .share-li li a {
-    color: #4b4f56;
-    font-size: 13px;
-    background: #fff;
-    display: block;
-    padding: 5.5px 12px;
-}
-.list ul li a:hover,.share-li li a:hover{
-    color: #fff;
-    background: #3b5998;
-}
+
+
 .emoji {
     z-index: 1;
     list-style: none;
@@ -266,36 +176,6 @@
 }
 .reaction-angry{
     background-image: url(https://goo.gl/Qv7wPo);
-}
-@-webkit-keyframes wo {
-
-    0% {transform: scale(.1, .1) rotate(0deg);
-        -webkit-transform: scale(.1, .1) rotate(0deg);
-        -moz-transform: scale(.1, .1) rotate(0deg);
-        -ms-transform: scale(.1, .1) rotate(0deg);
-        opacity: .5;
-    }
-    100% {transform: scale(.8, .8) rotate(360deg);
-        -webkit-transform: scale(.8, .8) rotate(360deg);
-        -moz-transform: scale(.8, .8) rotate(360deg);
-        -ms-transform: scale(.8, .8) rotate(360deg);
-        opacity: 1;
-    }
-}
-@keyframes wo {
-
-    0% {transform: scale(.1, .1) rotate(0deg);
-        -webkit-transform: scale(.1, .1) rotate(0deg);
-        -moz-transform: scale(.1, .1) rotate(0deg);
-        -ms-transform: scale(.1, .1) rotate(0deg);
-        opacity: .5;
-    }
-    100% {transform: scale(.8, .8) rotate(360deg);
-        -webkit-transform: scale(.8, .8) rotate(360deg);
-        -moz-transform: scale(.8, .8) rotate(360deg);
-        -ms-transform: scale(.8, .8) rotate(360deg);
-        opacity: 1;
-    }
 }
 .reaction-like {
     -webkit-animation-delay: .03s;
@@ -436,28 +316,6 @@
 .like:before{
     background-position: 0 -200px;
     background-size: 50px 406px;
-}
-.comment:before {
-    background-size: 50px 406px;
-    background-position: 0 -160px;
-}
-
-.share:before {
-    background-size: 50px 406px;
-    background-position: -20px -280px;
-}
-.share-li {
-    position: absolute;
-    right: 133px;
-    z-index: 3;
-    bottom: -135px;
-    background: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 3px;
-    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
-    display: none;
 }
 
 .like-main-like:before,
@@ -603,34 +461,6 @@
     background-size: 170px 128px;
     background-position: -24px -36px;
 }
-@-webkit-keyframes animatee {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0)
-    }
-    50% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1)
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-}
-@keyframes animatee {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0)
-    }
-    50% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1)
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-}
 
 .react .comment:hover,
 .like:hover,
@@ -673,74 +503,7 @@
 .like-details:hover {
     text-decoration: underline;
 }
-.animate-typing {
-    color: #90949c;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 16px;
-    display: none
-}
-.animate-typing ul{
-    padding: 0;
-    margin: 0 8px 0 0;
-    display: inline-block;
-}
-.animate-typing ul li{
-    display: inline-block;
-    vertical-align: middle;
-    width: 4px;
-    height: 4px;
-    background: #90949c;
-    margin-right: 2px;
-    border-radius: 2px;
-    -webkit-animation: typing 1.5s ease-in-out infinite;
-    animation: typing 1.5s ease-in-out infinite;
-}
 
-
-@-webkit-keyframes typing{
-    0% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px)
-    }
-    28% {
-        -webkit-transform: translateY(-5px);
-        transform: translateY(-5px)
-    }
-    44% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px)
-    }
-}
-
-
-@keyframes typing{
-    0% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px)
-    }
-    28% {
-        -webkit-transform: translateY(-5px);
-        transform: translateY(-5px)
-    }
-    44% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px)
-    }
-}
-.animate-typing ul li:nth-child(1){
-    -webkit-animation-delay: 200ms;
-    animation-delay: 200ms;
-}
-.animate-typing ul li:nth-child(2){
-    -webkit-animation-delay: 300ms;
-    animation-delay: 300ms;
-}
-.animate-typing ul li:nth-child(3){
-    -webkit-animation-delay: 400ms;
-    animation-delay: 400ms;
-    margin-right: 0px;
-}
 .like-btn-like,
 .like-btn-love,
 .like-btn-haha,
@@ -772,96 +535,4 @@
 .like-btn-angry {
     background-position: -17px -117px;
 }
-.comments {
-    background: #f6f7f9;
-    position: relative;
-    border-top: 1px solid #e5e6e9;
-    padding: 0 18px 13px 18px;
-}
-.comment-part{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-}
 
-textarea {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    overflow: hidden;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1px solid #dddfe2;
-    line-height: 32px;
-    outline: none;
-    border-radius: 16px;
-    resize: none;
-    -webkit-filter: drop-shadow(0px 2px 6px #dddfe2);
-    filter: drop-shadow(0px 2px 6px #dddfe2);
-    -webkit-user-select: auto;
-    -moz-user-select: auto;
-    -ms-user-select: auto;
-    user-select: auto
-}
-.stickers {
-    height: 100%;
-    padding-right: 9px;
-    position: absolute;
-    right: 0;
-}
-
-.stickers > a {
-    cursor: pointer;
-    outline: none;
-    padding: 0 8px;
-    margin: 0 -4px;
-    height: 100%;
-    display: inline-block;
-    line-height: 44px;
-}
-.stickers > a:hover ~.tolip{
-    opacity: 1;
-    top: -30px;
-    visibility: visible
-}
-
-.stickers a:first-child:hover ~.tolip:after{
-    content: 'Insert an emoji'
-}
-.stickers a:first-child:hover ~.tolip:before{
-    -webkit-transform: translateX(-43px);
-    -ms-transform: translateX(-43px);
-    transform: translateX(-43px)
-}
-
-.stickers a:nth-child(2):hover ~.tolip:after{
-    content: 'Post a photo'
-}
-.stickers a:nth-child(2):hover ~.tolip:before{
-    -webkit-transform: translateX(-15px);
-    -ms-transform: translateX(-15px);
-    transform: translateX(-15px)
-}
-
-.stickers a:nth-child(3):hover ~.tolip:after{
-    content: 'Post a GIF'
-}
-.stickers a:nth-child(3):hover ~.tolip:before{
-    -webkit-transform: translateX(15px);
-    -ms-transform: translateX(15px);
-    transform: translateX(15px)
-}
-
-.stickers a:nth-child(4):hover ~.tolip:after{
-    content: 'Post a sticker'
-}
-.stickers a:nth-child(4):hover ~.tolip:before{
-    -webkit-transform: translateX(45px);
-    -ms-transform: translateX(45px);
-    transform: translateX(45px)
-}

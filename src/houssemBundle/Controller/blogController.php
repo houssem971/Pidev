@@ -175,28 +175,68 @@ class blogController extends Controller
     {
         $pr = $this->getDoctrine()->getManager();
         $react = new react();
-
+        $reactss= $pr->getRepository("houssemBundle:react")->findAll();
         $re=$request->get('like');
 
         $comment=$request->get('comment');
         $user=$request->get('user');
-        $react->setIdblog($id);
+        $test =false;
+        if ($request->isMethod('POST')){
+        foreach ($reactss as $reacts)
+        {
 
-        $react->setReaction($re);
+            if ( ($reacts->getUser() == $user)  )
+            {
 
-$react->setUser($user);
-        $react->setComment($comment);
+                if ( ($id == $reacts->getIdblog()) )
+                {
+                    $pr->remove($reacts);
+                    $pr->flush();
+                    $reacts->setIdblog($id);
+                    $reacts->setReaction($re);
+                    $reacts->setUser($user);
+                    $reacts->setComment($comment);
 
-        $pr->persist($react);
-        $pr->flush();
+                    $pr->flush();
+                    break;
+                }
+            }
+            else
+            {
+                $react->setIdblog($id);
+                $react->setReaction($re);
+                $react->setUser($user);
+                $react->setComment($comment);
+
+                $test = true;
+
+
+            }
+
+        }
+        if($test === true)
+        {
+            $pr->persist($react);
+            $pr->flush();
+        }
+        }
+
+
+
+
+
+
+
         $blog=$pr->getRepository("houssemBundle:blog")->find($id);
         $nb=$pr->getRepository("houssemBundle:react")->findbyreact($id);
+        $like=$pr->getRepository("houssemBundle:react")->findbyreacts($id);
         $reaction=$pr->getRepository("houssemBundle:react")->findbyreaction($id);
 
         $comment=$pr->getRepository("houssemBundle:react")->findbycomment($id);
         return $this->render('/frontend/blog/blogdetail.html.twig', array(
             'blog'=>$blog,
             'nb'=>$nb,
+            'like'=>$like,
             'comment'=>$comment,
             'reaction'=>$reaction
         ));
@@ -212,10 +252,12 @@ $react->setUser($user);
         $blog=$pr->getRepository("houssemBundle:blog")->find($id);
         $nb=$pr->getRepository("houssemBundle:react")->findbyreact($id);
         $comment=$pr->getRepository("houssemBundle:react")->findbycomment($id);
+        $like=$pr->getRepository("houssemBundle:react")->findbyreacts($id);
         $reaction=$pr->getRepository("houssemBundle:react")->findbyreaction($id);
         return $this->render('/frontend/blog/blogdetail.html.twig', array(
             'blog'=>$blog,
             'nb'=>$nb,
+            'like'=>$like,
             'comment'=>$comment,
             'reaction'=>$reaction
         ));
