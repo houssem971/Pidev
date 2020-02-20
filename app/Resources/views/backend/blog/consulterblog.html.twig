@@ -58,6 +58,7 @@
                                             <td> {{ a.dateAjout | date('m/d/y')}} </td>
 
                                             <td><a href="{{ path('supp',{'id':a.id}) }}"><button class="btn btn-danger">supimer</button></a></td>
+                                            <td><a href="{{ path('modif',{'id':a.id}) }}"><button class="btn btn-danger">modifier</button></a></td>
 
                                         </tr>
                                         {% endfor %}

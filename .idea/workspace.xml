@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d77507c8-3cc8-4ef9-b80e-8799564f0fa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Raed.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Raed.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blog.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/blog/consulterblog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/blog/consulterblog.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/houssemBundle/Controller/blogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Controller/blogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/houssemBundle/Entity/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Entity/blog.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +88,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tessssst" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -105,7 +99,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -188,6 +182,8 @@
       <workItem from="1582190536729" duration="1418000" />
       <workItem from="1582192130127" duration="1375000" />
       <workItem from="1582196723865" duration="3414000" />
+      <workItem from="1582202272853" duration="2057000" />
+      <workItem from="1582211995979" duration="1284000" />
     </task>
     <servers />
   </component>
