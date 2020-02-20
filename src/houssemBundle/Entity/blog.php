@@ -3,6 +3,8 @@
 namespace houssemBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use DateTime;
+
 
 /**
  * blog
@@ -41,6 +43,13 @@ class blog
      * @ORM\Column(name="date_ajout", type="date")
      */
     private $dateAjout;
+
+    public function __construct()
+    {
+        $this->dateAjout= new DateTime();
+
+
+    }
 
     /**
      * @var string

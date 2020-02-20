@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d77507c8-3cc8-4ef9-b80e-8799564f0fa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Raed.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Raed.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blog.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blogdetail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blogdetail.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/houssemBundle/Controller/blogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Controller/blogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/houssemBundle/Repository/blogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Repository/blogRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/settings-panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/settings-panel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/houssemBundle/Entity/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Entity/blog.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +72,20 @@
       <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-time-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/cboden/ratchet" />
+      <path value="$PROJECT_DIR$/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/react/promise-timer" />
+      <path value="$PROJECT_DIR$/vendor/react/socket" />
+      <path value="$PROJECT_DIR$/vendor/react/stream" />
+      <path value="$PROJECT_DIR$/vendor/react/cache" />
+      <path value="$PROJECT_DIR$/vendor/react/dns" />
+      <path value="$PROJECT_DIR$/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/ratchet/rfc6455" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XAu0lq3gxd8poD4zj0YbQdrAy1" />
@@ -80,7 +94,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/houssemBundle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -172,6 +186,8 @@
       <workItem from="1582133555135" duration="8282000" />
       <workItem from="1582142094822" duration="26000" />
       <workItem from="1582190536729" duration="1418000" />
+      <workItem from="1582192130127" duration="1375000" />
+      <workItem from="1582196723865" duration="3414000" />
     </task>
     <servers />
   </component>

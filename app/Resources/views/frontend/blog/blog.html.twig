@@ -67,8 +67,8 @@
                         <article class="blogpost">
                             <h2 class="post-title"><a href="#">{{ a.nom }}</a></h2>
                             <div class="post-meta">
-                                <span><a href="#"><i class="icon-clock2"></i> {{ a.dateAjout | date('m/d/y')}}</a></span>
 
+                                <span><a href="#"><i class="icon-clock2">   {{ a.dateAjout? a.dateAjout|ago: 'unpublished' }}</i></a></span>
                                 <span><i class="icon-archive3"></i> <a href="">{{ a.categorie }}</a></span>
 
                             </div>
