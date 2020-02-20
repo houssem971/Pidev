@@ -1,8 +1,8 @@
 .b-settings-panel {
-	width: 200px;
+	width: 500px;
 
 	position: fixed;
-	top: 140px;    left: -200px;
+	top: 140px;    left: -500px;
 	z-index: 1000000;
 
 	padding: 20px;
@@ -51,7 +51,7 @@
 }
 
 .btn-settings:before {
-	content: "\f013";
+	content: "\f007";
 }
 
 .settings-section {
@@ -126,7 +126,7 @@
 	word-spacing: -.43em;
 }
 
-.bg-list div, .color-list div {
+.bg-list div {
 	display: inline-block;
 
 	width: 30px;

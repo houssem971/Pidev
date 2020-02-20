@@ -3,6 +3,7 @@
 namespace houssemBundle\Controller;
 
 use houssemBundle\Entity\blog;
+use houssemBundle\Entity\react;
 use houssemBundle\Form\blogType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -88,7 +89,95 @@ class blogController extends Controller
 
         return $this->render('/backend/blog/statblog.html.twig', array('categorie'=>$categorie));
     }
+    /**
+     * @Route("/consulterblog", name="consulterblogdront")
+     */
+    public function consulterblogdettAction(Request $request)
+    {
+        $pr = $this->getDoctrine()->getManager();
+        $blog=$pr->getRepository("houssemBundle:blog")->findAll();
+        $categorie=$pr->getRepository("houssemBundle:categorie")->findAll();
+        if ($request->isMethod('POST'))
+        {
+            $cat=$request->get('cate');
+            $q=$request->get('q');
+            if ($q !=NULL) {
 
+            $blog= $pr->getRepository("houssemBundle:blog")->findBy(array("nom"=>$q));
+
+            }
+
+               else if ($cat != NULL){
+
+                   $blog= $pr->getRepository("houssemBundle:blog")->findBy(array("categorie"=>$cat));
+
+              }
+
+
+
+        }
+
+
+        return $this->render('/frontend/blog/blog.html.twig', array(
+            'blog'=>$blog,
+            'categorie'=>$categorie
+        ));
+
+
+    }
+    /**
+     * @Route("/reaction/{id}",name="react");
+     */
+    public function ajcAction(Request $request ,$id)
+    {
+        $pr = $this->getDoctrine()->getManager();
+        $react = new react();
+
+        $re=$request->get('like');
+
+        $comment=$request->get('comment');
+        $user=$request->get('user');
+        $react->setIdblog($id);
+
+        $react->setReaction($re);
+
+$react->setUser($user);
+        $react->setComment($comment);
+
+        $pr->persist($react);
+        $pr->flush();
+        $blog=$pr->getRepository("houssemBundle:blog")->find($id);
+        $nb=$pr->getRepository("houssemBundle:react")->findbyreact($id);
+        $reaction=$pr->getRepository("houssemBundle:react")->findbyreaction($id);
+
+        $comment=$pr->getRepository("houssemBundle:react")->findbycomment($id);
+        return $this->render('/frontend/blog/blogdetail.html.twig', array(
+            'blog'=>$blog,
+            'nb'=>$nb,
+            'comment'=>$comment,
+            'reaction'=>$reaction
+        ));
+
+    }
+
+    /**
+     * @Route("/consulterblog/{id}", name="consulterblogfront")
+     */
+    public function consulterblogfrontAction($id)
+    {
+        $pr = $this->getDoctrine()->getManager();
+        $blog=$pr->getRepository("houssemBundle:blog")->find($id);
+        $nb=$pr->getRepository("houssemBundle:react")->findbyreact($id);
+        $comment=$pr->getRepository("houssemBundle:react")->findbycomment($id);
+        $reaction=$pr->getRepository("houssemBundle:react")->findbyreaction($id);
+        return $this->render('/frontend/blog/blogdetail.html.twig', array(
+            'blog'=>$blog,
+            'nb'=>$nb,
+            'comment'=>$comment,
+            'reaction'=>$reaction
+        ));
+
+    }
 
 
 }

@@ -25,6 +25,11 @@
         <link rel="stylesheet" href={{ asset('css/jquery-ui.css') }}>
         <link rel="stylesheet" href={{ asset('js/magnific-popup/magnific-popup.css') }}>
         <link rel="stylesheet" href={{ asset('css/style.css') }}>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" href={{ asset('./style.css') }}>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
 
         <!-- Google Fonts -->
         <link
@@ -143,7 +148,7 @@
 
                         </li>
                         <li class=" dropdown yamm-fw">
-                            <a href="{{ path('blog') }}">
+                            <a href="{{ path('consulterblogdront') }}">
                                 Blog
                             </a>
                         </li>
@@ -206,39 +211,41 @@
     </header>
 
 
-{% block content %}
+    {% block content %}
 
 
-{% endblock %}
+    {% endblock %}
 
 
 
-{% block javascripts %}
+    {% block javascripts %}
 
-<!-- jQuery -->
-<script src={{ asset('js/jquery.js') }}></script>
+        <!-- jQuery -->
+        <script src={{ asset('js/jquery.js') }}></script>
 
-<!-- Plugins -->
-<script src={{ asset('js/bootstrap.min.js') }}></script>
-<script src={{ asset('js/menu.js') }}></script>
-<script src={{ asset('js/owl-carousel/owl.carousel.min.js') }}></script>
-<script src={{ asset('js/rs-plugin/js/jquery.themepunch.tools.min.js') }}></script>
-<script src={{ asset('js/rs-plugin/js/jquery.themepunch.revolution.min.js') }}></script>
-<script src={{ asset('js/jquery.easing.min.js') }}></script>
-<script src={{ asset('js/isotope/isotope.pkgd.js') }}></script>
-<script src={{ asset('js/jflickrfeed.min.js') }}></script>
-<script src={{ asset('js/tweecool.js') }}></script>
-<script src={{ asset('js/flexslider/jquery.flexslider.js') }}></script>
-<script src={{ asset('js/easypie/jquery.easypiechart.min.js') }}></script>
-<script src={{ asset('js/jquery-ui.js') }}></script>
-<script src={{ asset('js/jquery.appear.js') }}></script>
-<script src={{ asset('js/jquery.inview.js') }}></script>
-<script src={{ asset('js/jquery.countdown.min.js') }}></script>
-<script src={{ asset('js/jquery.sticky.js') }}></script>
-<script src={{ asset('js/magnific-popup/jquery.magnific-popup.min.js') }}></script>
+        <!-- Plugins -->
+        <script src={{ asset('js/bootstrap.min.js') }}></script>
+        <script src={{ asset('js/menu.js') }}></script>
+        <script src={{ asset('js/owl-carousel/owl.carousel.min.js') }}></script>
+        <script src={{ asset('js/rs-plugin/js/jquery.themepunch.tools.min.js') }}></script>
+        <script src={{ asset('js/rs-plugin/js/jquery.themepunch.revolution.min.js') }}></script>
+        <script src={{ asset('js/jquery.easing.min.js') }}></script>
+        <script src={{ asset('js/isotope/isotope.pkgd.js') }}></script>
+        <script src={{ asset('js/jflickrfeed.min.js') }}></script>
+        <script src={{ asset('js/tweecool.js') }}></script>
+        <script src={{ asset('js/flexslider/jquery.flexslider.js') }}></script>
+        <script src={{ asset('js/easypie/jquery.easypiechart.min.js') }}></script>
+        <script src={{ asset('js/jquery-ui.js') }}></script>
+        <script src={{ asset('js/jquery.appear.js') }}></script>
+        <script src={{ asset('js/jquery.inview.js') }}></script>
+        <script src={{ asset('js/jquery.countdown.min.js') }}></script>
+        <script src={{ asset('js/jquery.sticky.js') }}></script>
+        <script src={{ asset('js/magnific-popup/jquery.magnific-popup.min.js') }}></script>
 
-<script src={{ asset('js/main.js') }}></script"></script>
-{% endblock %}
+        <script src={{ asset('js/main.js') }}></script>
+        <script src={{ asset('./script.js')}}></script>
+        <script src={{ asset('./scriptj.js')}}></script>
+    {% endblock %}
 </body>
 
 </html>

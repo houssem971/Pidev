@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d77507c8-3cc8-4ef9-b80e-8799564f0fa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base2.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/houssemBundle/Controller/categorieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Controller/categorieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blog.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blogdetail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/frontend/blog/blogdetail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/houssemBundle/Controller/blogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Controller/blogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/houssemBundle/Repository/blogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/houssemBundle/Repository/blogRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/settings-panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/settings-panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +80,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tessssst" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/houssemBundle" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,19 +94,19 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Raed\app\Resources\FOSUserBundle\views\Security" />
-      <recent name="C:\wamp64\www\Raed\app\Resources" />
-      <recent name="C:\wamp64\www\Raed\app\Resources\FOSUserBundle" />
-      <recent name="C:\wamp64\www\Raed\app\Resources\FOSUserBundle\views" />
-      <recent name="C:\wamp64\www\Raed\app\Resources\views\FOSUserBundle\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Raed\app\Resources\views\frontend\forum" />
       <recent name="C:\wamp64\www\Raed\app\Resources\views\frontend\blog" />
       <recent name="C:\wamp64\www\Raed\app\Resources\views\frontend\evenement" />
       <recent name="C:\wamp64\www\Raed\app\Resources\views\frontend\article" />
       <recent name="C:\wamp64\www\Raed\app\Resources\views\backend\forum" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Pidev\src\houssemBundle" />
+      <recent name="C:\wamp64\www\Raed\app\Resources\FOSUserBundle\views\Security" />
+      <recent name="C:\wamp64\www\Raed\app\Resources" />
+      <recent name="C:\wamp64\www\Raed\app\Resources\FOSUserBundle" />
+      <recent name="C:\wamp64\www\Raed\app\Resources\FOSUserBundle\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -152,6 +158,20 @@
       <workItem from="1581587050331" duration="5289000" />
       <workItem from="1581614035204" duration="2625000" />
       <workItem from="1581620267440" duration="25000" />
+      <workItem from="1581623306033" duration="694000" />
+      <workItem from="1581669696123" duration="2806000" />
+      <workItem from="1581793722078" duration="2065000" />
+      <workItem from="1581800863181" duration="40000" />
+      <workItem from="1581807850719" duration="269000" />
+      <workItem from="1581963872845" duration="8852000" />
+      <workItem from="1582013848234" duration="4153000" />
+      <workItem from="1582019820106" duration="5737000" />
+      <workItem from="1582027319076" duration="2688000" />
+      <workItem from="1582040318044" duration="373000" />
+      <workItem from="1582042864702" duration="8513000" />
+      <workItem from="1582133555135" duration="8282000" />
+      <workItem from="1582142094822" duration="26000" />
+      <workItem from="1582190536729" duration="1418000" />
     </task>
     <servers />
   </component>
@@ -163,7 +183,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

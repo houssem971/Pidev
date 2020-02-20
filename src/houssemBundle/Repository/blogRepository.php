@@ -20,4 +20,5 @@ class blogRepository extends \Doctrine\ORM\EntityRepository
         );
         return $Query->getArrayResult();
     }
+
 }
