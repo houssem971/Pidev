@@ -11,9 +11,9 @@
                             <a href="#">Dashboard</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#"> Ajouter </a>
+                            <a href="{{path('listBack')  }}"> Liste des produits </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Categorie</li>
+                        <li class="breadcrumb-item active" aria-current="page">Produit</li>
                     </ol>
                 </nav>
             </div>
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="grid">
-                            <p class="grid-header">Modifier categorie</p>
+                            <p class="grid-header">Modifier Produit</p>
                             <div class="grid-body">
                                 <div class="item-wrapper">
                                     <div class="row mb-3">
@@ -29,6 +29,7 @@
                                             <div class="form-group row showcase_row_area">
 
                                                 {{ form_start(form) }}
+
 
 
                                                 {{ form_end(form) }}

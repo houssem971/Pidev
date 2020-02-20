@@ -1,5 +1,5 @@
 produit_homepage:
-    path:     /
+    path:     /homepage
     defaults: { _controller: ProduitBundle:Default:index }
 
 addCat:
@@ -9,7 +9,6 @@ addCat:
 ListCat:
     path:     /ListCat
     defaults: { _controller: ProduitBundle:Produit:ListCat }
-
 deleteCat:
     path:     /deleteCat/{id}
     defaults: { _controller: ProduitBundle:Produit:deleteCat }
@@ -35,3 +34,22 @@ deleteProduit:
 editProduit:
     path:     /editProduit/{id}
     defaults: { _controller: ProduitBundle:Produit:editProduit }
+search:
+    path:     /search
+    defaults: { _controller: ProduitBundle:Produit:search }
+detail:
+    path:     /detail/{id}
+    defaults: { _controller: ProduitBundle:Produit:detail }
+Catlist:
+    path:     /Catlist
+    defaults: { _controller: ProduitBundle:Produit:Catlist }
+
+ListCatFront:
+    path:     /ListCatFront
+    defaults: { _controller: ProduitBundle:Produit:ListCatFront }
+affichetri:
+  path:     /affichetri
+  defaults: { _controller: ProduitBundle:Produit:affichetri }
+afficherProduitCatg:
+    path:     /afficherProduitCatg/{id}
+    defaults: { _controller: ProduitBundle:Produit:afficherProduitCatg }

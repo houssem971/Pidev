@@ -9,7 +9,7 @@
                             <a href="#">Dashboard</a>
                         </li>
 
-                        <li class="breadcrumb-item active" aria-current="page">article liste</li>
+                        <li class="breadcrumb-item active" aria-current="page">liste des articles </li>
                     </ol>
                 </nav>
             </div>
@@ -29,14 +29,18 @@
                                             <th>prix</th>
                                             <th>Description</th>
                                             <th>Date de publication</th>
-                                            <th>action</th>
+                                            <th>Supprimer</th>
+                                            <th>Modifier</th>
+
+                                            <th>facebook</th>
+
                                         </tr>
                                         </thead>
                                         <tbody>
                                         {% for posts in posts %}
                                         <tr>
                                             <td class="d-flex align-items-center border-top-0">
-                                                <img src="{{ asset('uploads/post/' ~ posts.image) }}" width="200px" height="300px"/>
+                                                <img src="{{ asset('uploads/post/' ~ posts.image) }}" width="200px" height="200px"/>
 
                                             </td>
 
@@ -47,15 +51,21 @@
                                             <td>{{ posts.date|date() }} </td>
 
                                             <td class="actions">
-                                                <i class="mdi mdi-dots-vertical"><a href="{{path('deleteProduit',{'id': posts.id })}}"> <button>Delete</button></a> </i>
+                                                <i ><a href="{{path('deleteProduit',{'id': posts.id })}}" > <button class="btn btn-primary">Supprimer</button></a> </i>
                                             </td>
                                             <td class="actions">
-                                                <i class="mdi mdi-dots-vertical"><a href="{{path('editProduit',{'id': posts.id })}}"> <button>Edit</button></a> </i>
+                                                <i class="mdi mdi-dots-vertical"><a href="{{path('editProduit',{'id': posts.id })}}"> <button class="btn btn-primary">Modifier</button></a> </i>
                                             </td>
+                                           <td class="actions">
+                                            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost.dev%2F2a7_php5%2Fview%2Fafficher_wishlist.php&layout=button_count&size=small&width=83&height=20&appId" width="83" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                           </td>
                                         </tr>
                                         {% endfor %}
                                         </tbody>
                                     </table>
+                                    <div class="navigation">
+                                        {{ knp_pagination_render(posts) }}
+                                    </div>
                                 </div>
                             </div>
                         </div>

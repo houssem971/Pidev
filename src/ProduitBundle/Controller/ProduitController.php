@@ -1,15 +1,15 @@
 <?php
 
 namespace ProduitBundle\Controller;
-
+use Knp\Component\Pager\Paginator;
 use ProduitBundle\Entity\Categorie;
 use ProduitBundle\Entity\Produit;
-
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use ProduitBundle\Form\CategorieType;
 use ProduitBundle\Form\ProduitType;
+
 
 class ProduitController extends Controller
 {
@@ -39,6 +39,7 @@ class ProduitController extends Controller
 
         return $this->render('backend/article/ListCat.html.twig',array('cats'=>$tab));
     }
+
     public function deleteCatAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -94,8 +95,17 @@ class ProduitController extends Controller
 
         $em=$this->getDoctrine()->getManager();
         $posts=$em->getRepository('ProduitBundle:Produit')->findAll();
+        /**
+         * @var $paginator Paginator
+         */
+        $paginator=$this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $posts,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',6)
+        );
         return $this->render('frontend/article/article.html.twig', array(
-            "posts" =>$posts
+            "posts" =>$result
         ));
 
     }
@@ -104,8 +114,17 @@ class ProduitController extends Controller
 
         $em=$this->getDoctrine()->getManager();
         $posts=$em->getRepository('ProduitBundle:Produit')->findAll();
+        /**
+         * @var $paginator Paginator
+         */
+        $paginator=$this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $posts,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',6)
+        );
         return $this->render('backend/article/consulterarticle.html.twig', array(
-            "posts" =>$posts
+            "posts" =>$result
         ));
 
     }
@@ -137,6 +156,82 @@ class ProduitController extends Controller
         }
         return $this->render('backend/article/editProduit.html.twig', array(
             "form"=> $form->createView()
+        ));
+    }
+    public function searchAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $requestString = $request->get('q');
+        $posts =  $em->getRepository('ProduitBundle:Produit')->findEntitiesByString($requestString);
+        if(!$posts) {
+            $result['posts']['error'] = "Post Not found :( ";
+        } else {
+            $result['posts'] = $this->getRealEntities($posts);
+        }
+        return new Response(json_encode($result));
+    }
+    public function getRealEntities($posts){
+        foreach ($posts as $posts){
+            $realEntities[$posts->getId()] = [$posts->getImage(),$posts->getNom()];
+
+        }
+        return $realEntities;
+    }
+
+    public function detailAction($id)
+    {
+        $em= $this->getDoctrine()->getManager();
+        $p=$em->getRepository('ProduitBundle:Produit')->find($id);
+        return $this->render('frontend/article/articledetail.html.twig', array(
+            'nom'=>$p->getNom(),
+            'date'=>$p->getDate(),
+            'prix'=>$p->getPrix(),
+            'image'=>$p->getImage(),
+            'descripion'=>$p->getDescription(),
+            'categorie'=>$p->getCategorie(),
+            'produit'=>$p,
+            'id'=>$p->getId()
+        ));
+    }
+
+    public function ListCatFrontAction()
+    {
+        $tab=$this->getDoctrine()->getRepository('ProduitBundle:Categorie')->findAll();
+
+        return $this->render('frontend/article/article.html.twig',array('cats'=>$tab));
+    }
+    public function affichetriAction(Request $request)
+    {
+        $posts=$this->getDoctrine()->getRepository(Produit::class)->orderStartD();
+        /**
+         * @var $paginator Paginator
+         */
+        $paginator=$this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $posts,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',6)
+        );
+        return $this->render('frontend/article/article.html.twig', array(
+            "posts" =>$result));
+    }
+
+    public function afficherProduitCatgAction($id, Request $request){
+        $em = $this->getDoctrine()->getManager();
+        $posts = $em->getRepository('ProduitBundle:Produit')->getProduitCtg($id);
+        $catg = $em->getRepository("ProduitBundle:Categorie")->findAll();
+        /**
+         * @var $paginator Paginator
+         */
+        $paginator=$this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $posts,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',6)
+        );
+
+
+        return $this->render('/frontend/article/article.html.twig',array('posts'=>$result,'cats'=>$catg
         ));
     }
 }

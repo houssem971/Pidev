@@ -20,7 +20,7 @@ class ProduitType extends AbstractType
         $builder->add('nom')
             ->add('description', TextareaType::class)
             ->add('prix')
-            ->add('date')
+            //->add('date')
             ->add('image', FileType::class, array('data_class'=>null, 'required'=>false))
             ->add('categorie',EntityType::class,array('class'=>'ProduitBundle:Categorie','choice_label'=>'nomCategorie'))
             ->add('Submit', SubmitType::class);

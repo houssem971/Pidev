@@ -1,6 +1,11 @@
 <?php
 
 namespace ProduitBundle\Repository;
+use ProduitBundle\Entity\Produit;
+use Doctrine\ORM\Query;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+use InvalidArgumentException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * ProduitRepository
@@ -10,4 +15,38 @@ namespace ProduitBundle\Repository;
  */
 class ProduitRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findEntitiesByString($str){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p
+                FROM ProduitBundle:Produit p
+                WHERE p.nom LIKE :str'
+            )
+            ->setParameter('str', '%'.$str.'%')
+            ->getResult();
+    }
+    public function findCat($str){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p
+                FROM ProduitBundle:Produit p
+                WHERE p.categorie=?1'
+            )
+            ->setParameters(array(1 => $str))
+            ->getResult();
+    }
+    public function orderStartD()
+    {
+        return $this->getEntityManager()
+            ->createQuery('SELECT p FROM ProduitBundle:Produit p  ORDER BY p.prix ASC')
+            ->getResult();
+    }
+    public function getProduitCtg($id)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->where('p.categorie = :id')
+            ->setParameter('id', $id);
+        $query = $qb->getQuery();
+        return $results = $query->getResult();
+    }
 }

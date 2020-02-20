@@ -18,7 +18,7 @@
         </div>
     </div>
 
-
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
     <div class="inner-content">
         <div class="container">
             <div class="row">
@@ -27,10 +27,10 @@
                     {{ form_start(a)}}
                     <div class="space30"></div>
 
-                    {{ form_widget(a.nom,{'attr':{'type':'text','class':'form-control','placeholder':'Title...'}}) }}
+                    {{ form_widget(a.nom,{'attr':{'type':'text','class':'form-control','placeholder':'Titre...'}}) }}
                     <div class="space30"></div>
 
-                    {{ form_widget(a.prix,{'attr':{'type':'number','class':'form-control','placeholder':'price...'}}) }}
+                    {{ form_widget(a.prix,{'attr':{'type':'number','class':'form-control','placeholder':'prix...'}}) }}
                     <div class="space30"></div>
 
                     {{ form_widget(a.description,{'attr':{'type':'textarea','class':'form-control','placeholder':'Description...'}}) }}
@@ -39,6 +39,8 @@
                     {{ form_widget(a.image,{'attr':{'type':'text','class':'form-control','placeholder':'photo...'}}) }}
                     <div class="space30"></div>
                     {{ form_widget(a.categorie,{'attr':{'type':'text','class':'form-control','placeholder':'categorie...'}}) }}
+                    <div class="space30"></div>
+                    {{ form_widget(a.Submit,{attr:{'class':'btn btn-primary btn-block'}}) }}
                     {{ form_end(a) }}
                     <div class="space30"></div>
 {#                   {{ ## }} <input type="button" class="btn btn-primary" value="Deposer">#}
@@ -47,7 +49,18 @@
         </div>
     </div>
 
+    {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+        <br><br><br>
 
+        <div class="alert alert-warning" role="alert">
+            <h3>
+                In order to post in our blog you need to be connected, if you are not
+                you can join us by clicking <a href="{{ path('fos_user_registration_register') }}">HERE</a>
+                Or if you already have an account click <a href="{{ path('fos_user_security_login') }}" >HERE</a> to connect !
+            </h3>
+
+        </div>
+    {% endif %}
     <!-- STYLE SWITCHER
 ============================================= -->
     <div class="b-settings-panel">
