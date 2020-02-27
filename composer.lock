@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "46289f3da4d7db33c177534a0dc91b66",
+=======
+    "content-hash": "ef56fcff9fc1cb29559c2b93f10a7e9b",
+>>>>>>> raed
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -898,6 +902,7 @@
             "time": "2017-12-17T02:57:51+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "evenement/evenement",
             "version": "v2.1.0",
             "source": {
@@ -916,10 +921,41 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.0||^5.7||^4.8.35"
+=======
+            "name": "dompdf/dompdf",
+            "version": "v0.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompdf/dompdf.git",
+                "reference": "75f13c700009be21a1965dc2c5b68a8708c22ba2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/75f13c700009be21a1965dc2c5b68a8708c22ba2",
+                "reference": "75f13c700009be21a1965dc2c5b68a8708c22ba2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "phenx/php-font-lib": "0.5.*",
+                "phenx/php-svg-lib": "0.3.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.5|^6.5",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "suggest": {
+                "ext-gd": "Needed to process images",
+                "ext-gmagick": "Improves image processing performance",
+                "ext-imagick": "Improves image processing performance"
+>>>>>>> raed
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "2.0-dev"
                 }
             },
@@ -944,6 +980,40 @@
                 "event-emitter"
             ],
             "time": "2017-07-17T17:39:19+00:00"
+=======
+                    "dev-develop": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dompdf\\": "src/"
+                },
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                },
+                {
+                    "name": "Brian Sweeney",
+                    "email": "eclecticgeek@gmail.com"
+                },
+                {
+                    "name": "Gabriel Bull",
+                    "email": "me@gabrielbull.com"
+                }
+            ],
+            "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
+            "homepage": "https://github.com/dompdf/dompdf",
+            "time": "2018-12-14T02:40:31+00:00"
+>>>>>>> raed
         },
         {
             "name": "fig/link-util",
@@ -1079,6 +1149,7 @@
             "time": "2018-03-08T08:59:27+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "guzzlehttp/psr7",
             "version": "1.6.1",
             "source": {
@@ -1120,6 +1191,34 @@
                 "files": [
                     "src/functions_include.php"
                 ]
+=======
+            "name": "gregwar/captcha",
+            "version": "v1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/Captcha.git",
+                "reference": "6088ad3db59bc226423ad1476a9f0424b19b1866"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gregwar/Captcha/zipball/6088ad3db59bc226423ad1476a9f0424b19b1866",
+                "reference": "6088ad3db59bc226423ad1476a9f0424b19b1866",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.0",
+                "symfony/finder": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "captcha",
+            "autoload": {
+                "psr-4": {
+                    "Gregwar\\": "src/Gregwar"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1127,6 +1226,59 @@
             ],
             "authors": [
                 {
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                },
+                {
+                    "name": "Jeremy Livingston",
+                    "email": "jeremy.j.livingston@gmail.com"
+                }
+            ],
+            "description": "Captcha generator",
+            "homepage": "https://github.com/Gregwar/Captcha",
+            "keywords": [
+                "bot",
+                "captcha",
+                "spam"
+            ],
+            "time": "2020-01-22T14:54:02+00:00"
+        },
+        {
+            "name": "gregwar/captcha-bundle",
+            "version": "v2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/CaptchaBundle.git",
+                "reference": "3ccfdf1c9324acbdfbcccea2c454075115741b3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gregwar/CaptchaBundle/zipball/3ccfdf1c9324acbdfbcccea2c454075115741b3a",
+                "reference": "3ccfdf1c9324acbdfbcccea2c454075115741b3a",
+                "shasum": ""
+            },
+            "require": {
+                "gregwar/captcha": "~1.1",
+                "php": ">=5.3.9",
+                "symfony/form": "~2.8|~3.0|~4.0",
+                "symfony/framework-bundle": "~2.8|~3.0|~4.0",
+                "twig/twig": "^1.40|^2.9"
+            },
+            "type": "captcha-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Gregwar\\CaptchaBundle\\": "/"
+                }
+>>>>>>> raed
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+<<<<<<< HEAD
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
@@ -1148,6 +1300,29 @@
                 "url"
             ],
             "time": "2019-07-01T23:21:34+00:00"
+=======
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                },
+                {
+                    "name": "Jeremy Livingston",
+                    "email": "jeremy.j.livingston@gmail.com"
+                }
+            ],
+            "description": "Captcha bundle",
+            "homepage": "https://github.com/Gregwar/CaptchaBundle",
+            "keywords": [
+                "Symfony2",
+                "bot",
+                "captcha",
+                "code",
+                "security",
+                "spam",
+                "visual"
+            ],
+            "time": "2019-09-23T13:07:46+00:00"
+>>>>>>> raed
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1251,6 +1426,7 @@
             "time": "2014-01-12T16:20:24+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "knplabs/knp-time-bundle",
             "version": "v1.10.0",
             "target-dir": "Knp/Bundle/TimeBundle",
@@ -1282,11 +1458,49 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.1.x-dev"
+=======
+            "name": "knplabs/knp-components",
+            "version": "v1.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/knp-components.git",
+                "reference": "fc1755ba2b77f83a3d3c99e21f3026ba2a1429be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/fc1755ba2b77f83a3d3c99e21f3026ba2a1429be",
+                "reference": "fc1755ba2b77f83a3d3c99e21f3026ba2a1429be",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "~1.0@beta",
+                "doctrine/orm": "~2.4",
+                "doctrine/phpcr-odm": "~1.2",
+                "jackalope/jackalope-doctrine-dbal": "~1.2",
+                "phpunit/phpunit": "~4.2",
+                "ruflin/elastica": "~1.0",
+                "symfony/event-dispatcher": "~2.5",
+                "symfony/property-access": ">=2.3"
+            },
+            "suggest": {
+                "symfony/property-access": "To allow sorting arrays"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+>>>>>>> raed
                 }
             },
             "autoload": {
                 "psr-0": {
+<<<<<<< HEAD
                     "Knp\\Bundle\\TimeBundle": ""
+=======
+                    "Knp\\Component": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1300,6 +1514,69 @@
                 },
                 {
                     "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/knp-components/contributors"
+                }
+            ],
+            "description": "Knplabs component library",
+            "homepage": "http://github.com/KnpLabs/knp-components",
+            "keywords": [
+                "components",
+                "knp",
+                "knplabs",
+                "pager",
+                "paginator"
+            ],
+            "time": "2018-09-11T07:54:48+00:00"
+        },
+        {
+            "name": "knplabs/knp-paginator-bundle",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
+                "reference": "06100a8f3a1e878d3d2d5d06a61c4e648f94aed7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/06100a8f3a1e878d3d2d5d06a61c4e648f94aed7",
+                "reference": "06100a8f3a1e878d3d2d5d06a61c4e648f94aed7",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-components": "~1.2",
+                "php": ">=5.6.0",
+                "symfony/framework-bundle": "~2.7|~3.0|~4.0",
+                "symfony/translation": "~2.7|~3.0|~4.0",
+                "twig/twig": "~1.12|~2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.35|~5.4.3|~6.4",
+                "symfony/expression-language": "~2.7|~3.0|~4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Bundle\\PaginatorBundle\\": ""
+>>>>>>> raed
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+<<<<<<< HEAD
                     "homepage": "http://github.com/KnpLabs/KnpTimeBundle/contributors"
                 }
             ],
@@ -1314,6 +1591,69 @@
                 "time"
             ],
             "time": "2019-12-05T03:43:17+00:00"
+=======
+                    "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle/contributors"
+                }
+            ],
+            "description": "Paginator bundle for Symfony to automate pagination and simplify sorting and other features",
+            "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
+            "keywords": [
+                "bundle",
+                "knp",
+                "knplabs",
+                "pager",
+                "pagination",
+                "paginator",
+                "symfony"
+            ],
+            "time": "2019-02-28T13:51:20+00:00"
+        },
+        {
+            "name": "mgilet/notification-bundle",
+            "version": "3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maximilienGilet/notification-bundle.git",
+                "reference": "6b44f0f618a8f4ac0d37232ce38eb9bea62cfba0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maximilienGilet/notification-bundle/zipball/6b44f0f618a8f4ac0d37232ce38eb9bea62cfba0",
+                "reference": "6b44f0f618a8f4ac0d37232ce38eb9bea62cfba0",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "*",
+                "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0",
+                "twig/twig": "*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mgilet\\NotificationBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maximilien Gilet",
+                    "email": "maximilien248@gmail.com"
+                }
+            ],
+            "description": "A simple Symfony 3 bundle for user notifications",
+            "keywords": [
+                "symfony notification bundle simple"
+            ],
+            "time": "2018-09-06T11:36:37+00:00"
+>>>>>>> raed
         },
         {
             "name": "monolog/monolog",
@@ -1394,6 +1734,69 @@
             "time": "2019-12-20T14:15:16+00:00"
         },
         {
+            "name": "ob/highcharts-bundle",
+            "version": "1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marcaube/ObHighchartsBundle.git",
+                "reference": "22753f7b4036a31a46b7f720e03893bfc6150307"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marcaube/ObHighchartsBundle/zipball/22753f7b4036a31a46b7f720e03893bfc6150307",
+                "reference": "22753f7b4036a31a46b7f720e03893bfc6150307",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "symfony/config": "^2.8 || ^3.4 || ^4.0",
+                "symfony/dependency-injection": "^2.8 || ^3.4 || ^4.0",
+                "symfony/http-kernel": "^2.8 || ^3.4 || ^4.0",
+                "symfony/yaml": "^2.8 || ^3.4 || ^4.0",
+                "twig/twig": "^1.35 || ^2.4",
+                "zendframework/zend-json": "^2.3 || ^3.0"
+            },
+            "require-dev": {
+                "nyholm/symfony-bundle-test": "^1.2.3",
+                "symfony/framework-bundle": "^2.8 || ^3.4 || ^4.0",
+                "symfony/phpunit-bridge": "^3.3 || ^4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ob\\HighchartsBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Aubé"
+                }
+            ],
+            "description": "Symfony2 Bundle that ease the use of highcharts to display rich graph and charts in your app",
+            "homepage": "https://github.com/marcaube/ObHighchartsBundle",
+            "keywords": [
+                "Symfony2",
+                "chart",
+                "charting",
+                "charts",
+                "graph",
+                "graphs",
+                "highcharts",
+                "marcaube",
+                "ob"
+            ],
+            "time": "2017-12-27T14:37:46+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v2.0.18",
             "source": {
@@ -1441,6 +1844,83 @@
                 "random"
             ],
             "time": "2019-01-03T20:59:08+00:00"
+        },
+        {
+            "name": "phenx/php-font-lib",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-font-lib.git",
+                "reference": "760148820110a1ae0936e5cc35851e25a938bc97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/760148820110a1ae0936e5cc35851e25a938bc97",
+                "reference": "760148820110a1ae0936e5cc35851e25a938bc97",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FontLib\\": "src/FontLib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse, export and make subsets of different types of font files.",
+            "homepage": "https://github.com/PhenX/php-font-lib",
+            "time": "2017-09-13T16:14:37+00:00"
+        },
+        {
+            "name": "phenx/php-svg-lib",
+            "version": "v0.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-svg-lib.git",
+                "reference": "5fa61b65e612ce1ae15f69b3d223cb14ecc60e32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/5fa61b65e612ce1ae15f69b3d223cb14ecc60e32",
+                "reference": "5fa61b65e612ce1ae15f69b3d223cb14ecc60e32",
+                "shasum": ""
+            },
+            "require": {
+                "sabberworm/php-css-parser": "^8.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.5|^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Svg\\": "src/Svg"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse and export to PDF SVG files.",
+            "homepage": "https://github.com/PhenX/php-svg-lib",
+            "time": "2019-09-11T20:02:13+00:00"
         },
         {
             "name": "psr/cache",
@@ -1732,6 +2212,7 @@
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -1963,10 +2444,31 @@
                 "php": ">=5.4.0"
             },
             "require-dev": {
+=======
+            "name": "sabberworm/php-css-parser",
+            "version": "8.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
+                "reference": "91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f",
+                "reference": "91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "codacy/coverage": "^1.4",
+>>>>>>> raed
                 "phpunit/phpunit": "~4.8"
             },
             "type": "library",
             "autoload": {
+<<<<<<< HEAD
                 "psr-4": {
                     "React\\Promise\\": "src/"
                 },
@@ -2021,6 +2523,11 @@
                 "files": [
                     "src/functions_include.php"
                 ]
+=======
+                "psr-0": {
+                    "Sabberworm\\CSS": "lib/"
+                }
+>>>>>>> raed
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2028,6 +2535,7 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Christian Lück",
                     "email": "christian@lueck.tv"
                 }
@@ -2136,6 +2644,19 @@
                 "writable"
             ],
             "time": "2019-01-01T16:15:09+00:00"
+=======
+                    "name": "Raphael Schweikert"
+                }
+            ],
+            "description": "Parser for CSS Files written in PHP",
+            "homepage": "http://www.sabberworm.com/blog/2010/6/10/php-css-parser",
+            "keywords": [
+                "css",
+                "parser",
+                "stylesheet"
+            ],
+            "time": "2019-02-22T07:42:52+00:00"
+>>>>>>> raed
         },
         {
             "name": "sensio/distribution-bundle",
@@ -3101,6 +3622,171 @@
                 "templating"
             ],
             "time": "2019-11-11T16:49:32+00:00"
+        },
+        {
+            "name": "webeweb/core-library",
+            "version": "v2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webeweb/core-library.git",
+                "reference": "44b4d645e84d34eb7372d9c2d40825fc4ed7dfdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webeweb/core-library/zipball/44b4d645e84d34eb7372d9c2d40825fc4ed7dfdc",
+                "reference": "44b4d645e84d34eb7372d9c2d40825fc4ed7dfdc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-zip": "*",
+                "php": "^5.6|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WBW\\Library\\Core\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "webeweb",
+                    "homepage": "http://github.com/webeweb/"
+                }
+            ],
+            "description": "Core library",
+            "homepage": "http://github.com/webeweb/core-library",
+            "keywords": [
+                "core",
+                "library",
+                "webeweb"
+            ],
+            "time": "2018-07-12T19:12:44+00:00"
+        },
+        {
+            "name": "webeweb/highcharts-bundle",
+            "version": "v1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webeweb/highcharts-bundle.git",
+                "reference": "c28cf440c49e8e3e466dc8d2b5654cbe8ba8ffe1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webeweb/highcharts-bundle/zipball/c28cf440c49e8e3e466dc8d2b5654cbe8ba8ffe1",
+                "reference": "c28cf440c49e8e3e466dc8d2b5654cbe8ba8ffe1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^5.6|^7.0",
+                "symfony/framework-bundle": "^2.6|^3.0",
+                "symfony/translation": "^2.6|^3.0",
+                "twig/twig": "^1.0||^2.0",
+                "webeweb/core-library": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.*",
+                "symfony/expression-language": "^2.6|^3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WBW\\Bundle\\HighchartsBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "webeweb",
+                    "homepage": "http://github.com/webeweb/"
+                }
+            ],
+            "description": "Integrate HighchartsJS with Symfony 2",
+            "homepage": "http://github.com/webeweb/highcharts-bundle",
+            "keywords": [
+                "bundle",
+                "highcharts",
+                "symfony",
+                "webeweb"
+            ],
+            "time": "2018-07-12T19:10:45+00:00"
+        },
+        {
+            "name": "zendframework/zend-json",
+            "version": "3.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-json.git",
+                "reference": "e9ddb1192d93fe7fff846ac895249c39db75132b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-json/zipball/e9ddb1192d93fe7fff846ac895249c39db75132b",
+                "reference": "e9ddb1192d93fe7fff846ac895249c39db75132b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.23 || ^6.4.3",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-stdlib": "^2.7.7 || ^3.1"
+            },
+            "suggest": {
+                "zendframework/zend-json-server": "For implementing JSON-RPC servers",
+                "zendframework/zend-xml2json": "For converting XML documents to JSON"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1.x-dev",
+                    "dev-develop": "3.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Json\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides convenience methods for serializing native PHP to JSON and decoding JSON to native PHP",
+            "keywords": [
+                "ZendFramework",
+                "json",
+                "zf"
+            ],
+            "abandoned": "laminas/laminas-json",
+            "time": "2019-10-09T13:56:13+00:00"
         }
     ],
     "packages-dev": [
@@ -3156,7 +3842,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "abandoned": true,
+            "abandoned": "symfony/maker-bundle",
             "time": "2017-12-07T15:36:41+00:00"
         },
         {
