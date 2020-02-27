@@ -59,6 +59,8 @@ It comes pre-configured with the following bundles:
 
   * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
     integration
+    
+  * API javascript.js
 
 All libraries and bundles included in the Symfony Standard Edition are
 released under the MIT or BSD license.
