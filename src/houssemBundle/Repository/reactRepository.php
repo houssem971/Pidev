@@ -18,7 +18,9 @@ class reactRepository extends \Doctrine\ORM\EntityRepository
         $Query=$this->getEntityManager()->createQuery(
             "SELECT COUNT(c.id) as nb
              FROM houssemBundle:react as c
-             WHERE c.idblog = $id"
+             WHERE c.idblog = $id
+             AND c.reaction IS NOT NULL
+             "
 
         );
 
@@ -54,9 +56,11 @@ class reactRepository extends \Doctrine\ORM\EntityRepository
     public function findbycomment($id)
     {
         $Query=$this->getEntityManager()->createQuery(
-            "SELECT c.comment , c.user
+            "SELECT c.comment , c.user, c.id
              FROM houssemBundle:react as c
-             WHERE c.idblog = $id"
+             WHERE c.idblog = $id
+             AND c.comment IS NOT NULL
+             "
 
         );
 

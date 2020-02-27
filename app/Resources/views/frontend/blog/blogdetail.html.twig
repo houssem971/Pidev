@@ -99,6 +99,7 @@
 
                             <blockquote class="style1">
                                 <p>{{ blog.description }}</p>
+
                                 <small><b>Administrateur</b></small>
                             </blockquote>
 
@@ -115,8 +116,9 @@
                                 <div class="comment-meta">
                                     <a href="#">{{ a.user }}</a>
                                     <span>
-											<a href="#" class="button btn-xs reply"><i
-                                                        class="fa fa-comment"></i>&nbsp;traduire</a>
+											<a href="{{ path('suppfr',{'id':a.id}) }}" class="button btn-xs reply">
+<input type="hidden" name="ide" id="ide" value="{{ blog.id }}">
+                                                <i class="fa fa-comment"></i>&nbsp;supprimer</a>
 										</span>
                                 </div>
                                 <p>
@@ -133,8 +135,8 @@
 
 
                         <div class="space20">
-								<textarea id="myTextArea" name="comment" class="input-md form-control" rows="6"
-                                          placeholder="Comment"  maxlength="400"></textarea>
+								<textarea  name="comment" class="input-md form-control" rows="6"
+                                          placeholder="Comment" required  maxlength="400"></textarea>
                         </div>
                         <button type="submit" class="button btn-small">
                             poster

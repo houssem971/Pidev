@@ -7,6 +7,7 @@ use houssemBundle\Entity\blog;
 use houssemBundle\Entity\react;
 use houssemBundle\Form\blogType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -123,6 +124,24 @@ class blogController extends Controller
 
     }
     /**
+     * @Route("/delate/{id}",name="suppfr");
+     */
+    public function suppAction(Request $request,$id)
+    {
+        $ide=$request->get('ide');
+        $pr = $this->getDoctrine()->getManager();
+        $biogs=$pr->getRepository("houssemBundle:react")->find($id);
+        $biogs->setComment(null);
+        $pr->flush();
+
+     return new  Response('<script> alert("commentaire supprimer"); 
+window.location="http://127.0.0.1:8000/consulterblog/15";
+
+</script>');
+
+
+    }
+    /**
      * @Route("/admin/stat",name="stat");
      */
     public function statAction()
@@ -180,52 +199,59 @@ class blogController extends Controller
 
         $comment=$request->get('comment');
         $user=$request->get('user');
-        $test =false;
+
         if ($request->isMethod('POST')){
+            $test=false;
         foreach ($reactss as $reacts)
         {
-
-            if ( ($reacts->getUser() == $user)  )
+            if (( ($reacts->getUser() == $user)  ) && ( ($id == $reacts->getIdblog()) ))
             {
+                    if ((($re == $reacts->getReaction()))) {
 
-                if ( ($id == $reacts->getIdblog()) )
-                {
-                    $pr->remove($reacts);
-                    $pr->flush();
-                    $reacts->setIdblog($id);
-                    $reacts->setReaction($re);
-                    $reacts->setUser($user);
-                    $reacts->setComment($comment);
-
-                    $pr->flush();
+                     $test=true;
                     break;
+                    }
+                    else {
+                        $reacts->setReaction(null);
+                        $pr->flush();
+                        $test=false;
+
+
+                    }
                 }
-            }
-            else
-            {
-                $react->setIdblog($id);
+                else {
                 $react->setReaction($re);
+                $react->setIdblog($id);
                 $react->setUser($user);
                 $react->setComment($comment);
-
-                $test = true;
-
+                $pr->persist($react);
+                $pr->flush();
+                break;
+                 }
 
             }
-
-        }
-        if($test === true)
+        if($test == true)
         {
+            $react->setIdblog($id);
+            $react->setReaction(NULL);
+            $react->setUser($user);
+            $react->setComment($comment);
+            $pr->persist($react);
+            $pr->flush();
+        }else
+        {
+
+            $react->setReaction($re);
+            $react->setIdblog($id);
+            $react->setUser($user);
+            $react->setComment($comment);
             $pr->persist($react);
             $pr->flush();
         }
+
+
+
         }
-
-
-
-
-
-
 
         $blog=$pr->getRepository("houssemBundle:blog")->find($id);
         $nb=$pr->getRepository("houssemBundle:react")->findbyreact($id);
@@ -263,6 +289,7 @@ class blogController extends Controller
         ));
 
     }
+
 
 
 }

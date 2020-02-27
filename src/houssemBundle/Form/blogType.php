@@ -19,7 +19,7 @@ class blogType extends AbstractType
     {
         $builder->add('nom')
             ->add('description')
-            ->add('dateAjout',DateType::class)
+            ->add('dateAjout',DateType::class ,['disabled'=>'disabled'])
             ->add('image1', FileType::class, array(
                 'label' => 'ajouter image',
                 'data_class' => null
