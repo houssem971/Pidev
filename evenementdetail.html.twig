@@ -1,0 +1,276 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <link href='https://bootswatch.com/4/lumen/bootstrap.min.css" rel="stylesheet'>
+    <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous" >
+    <div class="page_header">
+        <div class="bcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="bcrumbs">
+                            <li><a href="{{ path('show') }}"><i class="fa fa-home"></i> Tous les événements</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INNER CONTENT -->
+    <div class="inner-content">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-5">
+                    <h1> {{ event.nomEvt }} </h1>
+                    <div id="blog-slider" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="images/projects/2/1.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="images/projects/2/2.jpg" class="img-responsive" alt="">
+                        </div>
+                        <img src="{{ asset('uploads/images/' ~ event.image) }}" class="img-responsive">
+
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="fs-info">
+                        <div class="clearfix space20"></div>
+                        <ul class="project-meta">
+                            <h3>ajouté par :{% if is_granted ('ROLE_USER') %} <i class="fas fa-user-check">{% endif %}</i>  {{ event.user }} </h3>
+                            <li><i class="icon-target22"></i>{{ event.nomEvt }} </li>
+                            <li><i class="icon-tag2"></i>Catégorie : {{ event.categorie.nomCtg }} </li>
+                            <li><i class="icon-calendar"></i>{{ event.date|date('Y-m-d') }} </li>
+                            <li><i class="icon-file2"></i><span class="project_client">{{event.description}}</span></li>
+                            <br>
+                            <li><button class="btn-primary" data-url="'http://127.0.0.1:8000/showdet/'+{{ event.id }}"><a class="share_facebook" style="color: #8be9fd"><div class="fab fa-facebook-square"> Partager sur facebook </div></a></button>
+                            </li>
+                            {% if event.user ==   app.user  %}
+                            {% if is_granted ('ROLE_USER') %}
+                                <h4><a href="{{ path('event_like', {'id': event.id}) }}" class="btn btn-link js-like" style="color:#FFA500">
+                                        {% if like %}
+                                            <i class="fas fa-check-square"></i>
+                                        {% else %}
+                                            <i class="far fa-check-square"></i>
+                                        {% endif %}
+                                        <span class="js-LikesB"><b>{{ LikesB }}</b></span>
+                                        <span class="js-label"><b>Participer</b></span>
+                                    </a></h4>
+
+                                <li><a href="{{ path('deleteEvtFront' ,{'id':event.id}) }}" style="color: #8c0615"><i class="fas fa-trash"></i> Supprimer</a></li>
+                                <li><a href="{{ path('modifierEvtFront' ,{'id':event.id}) }}" style="color: #5c2699"><i class="fas fa-edit"></i> Modifier</a></li>
+                            {% endif %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="fs-info">
+
+                    <p></p>
+
+                </div>
+            </div>
+            <hr>
+            <div id="portfolio-home" class="isotope gutter folio-boxed-4col">
+                <div class="project-item photography branding">
+                    <a href="./portfolio-single-slider.html">
+                        <div class="project-gal">
+                            <img src="images/projects/1.jpg" class="img-responsive" alt="">
+                            <div class="overlay-folio2">
+                                <div class="project-info">
+                                    <h2>Aliquam tincidunt risus.</h2>
+                                    <p>Web , Creative</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-item illustration web-design illustration">
+                    <a href="./portfolio-single-slider.html">
+                        <div class="project-gal">
+                            <img src="images/projects/2.jpg" class="img-responsive" alt="">
+                            <div class="overlay-folio2">
+                                <div class="project-info">
+                                    <h2>Vestibulum auctor</h2>
+                                    <p>Image Gallery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-item illustration print">
+                    <a href="./portfolio-single-slider.html">
+                        <div class="project-gal">
+                            <img src="images/projects/3.jpg" class="img-responsive" alt="">
+                            <div class="overlay-folio2">
+                                <div class="project-info">
+                                    <h2>Vestibulum auctor</h2>
+                                    <p>Image Gallery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-item photography web-design">
+                    <a href="./portfolio-single-slider.html">
+                        <div class="project-gal">
+                            <img src="images/projects/4.jpg" class="img-responsive" alt="">
+                            <div class="overlay-folio2">
+                                <div class="project-info">
+                                    <h2>Vestibulum auctor</h2>
+                                    <p>Image Gallery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- TWEET / SUBSCRIBE -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 f-tweet">
+                    <small>Follow<em>Twitter</em></small>
+                    <div class="tweet-info">
+                        <div id="tweetcool"></div>
+                    </div>
+                </div>
+                <div class="col-md-5 f-subscribe">
+                    <small>Sign up<em>Newsletter</em></small>
+                    <form>
+                        <input placeholder="Search here ..." type="text">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- STYLE SWITCHER
+============================================= -->
+    <div class="b-settings-panel">
+        <div class="settings-section">
+				<span>
+					Boxed
+				</span>
+            <div class="b-switch">
+                <div class="switch-handle"></div>
+            </div>
+            <span>
+					Wide
+				</span>
+        </div>
+        <hr class="dashed" style="margin: 15px 0px;">
+        <h5>Main Background</h5>
+        <div class="settings-section bg-list">
+            <div class="bg-pattern1"></div>
+            <div class="bg-pattern2"></div>
+            <div class="bg-pattern6"></div>
+            <div class="bg-pattern10"></div>
+            <div class="bg-pattern16"></div>
+            <div class="bg-pattern4"></div>
+            <div class="bg-pattern5"></div>
+            <div class="bg-pattern7"></div>
+            <div class="bg-pattern9"></div>
+            <div class="bg-pattern11"></div>
+            <div class="bg-pattern12"></div>
+            <div class="bg-pattern13"></div>
+            <div class="bg-pattern17"></div>
+            <div class="bg-pattern8"></div>
+            <div class="bg-pattern14"></div>
+            <div class="bg-pattern15"></div>
+            <div class="bg-pattern3"></div>
+            <div class="bg-pattern18"></div>
+        </div>
+        <hr class="dashed" style="margin: 15px 0px;">
+        <h5>Color Scheme</h5>
+        <div class="settings-section color-list">
+            <div data-src="css/color-scheme/moderate-green.css" style="background: #8ec249"></div>
+            <div data-src="css/color-scheme/vivid-blue.css" style="background: #228dff"></div>
+            <div data-src="css/color-scheme/orange.css" style="background: #fa6900"></div>
+            <div data-src="css/color-scheme/brown.css" style="background: #a68c69"></div>
+            <div data-src="css/color-scheme/yellow.css" style="background: #fabe28"></div>
+            <div data-src="css/color-scheme/violet.css" style="background: #ba01ff"></div>
+            <div data-src="css/color-scheme/strong-cyan.css" style="background: #00b9bd"></div>
+            <div data-src="css/color-scheme/soft-cyan.css" style="background: #4bd5ea"></div>
+            <div data-src="css/color-scheme/red.css" style="background: #ff0104"></div>
+            <div data-src="css/color-scheme/lite-brown.css" style="background: #f3a76d"></div>
+            <div data-src="css/color-scheme/lime-green.css" style="background: #3bdbad"></div>
+            <div data-src="css/color-scheme/light-voilet.css" style="background: #aaa5ff"></div>
+            <div data-src="css/color-scheme/gray-green.css" style="background: #697060"></div>
+            <div data-src="css/color-scheme/gray-cyan.css" style="background: #aeced2"></div>
+            <div data-src="css/color-scheme/de-green.css" style="background: #b6cd71"></div>
+            <div data-src="css/color-scheme/cream.css" style="background: #e0d6b2"></div>
+
+        </div>
+        <div class="btn-settings"></div>
+    </div>
+    <script>
+            var popupCenter = function(url, title, width, height){
+                var popupWidth = width || 640;
+                var popupHeight = height || 320;
+                var windowLeft = window.screenLeft || window.screenX;
+                var windowTop = window.screenTop || window.screenY;
+                var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+                var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                var popupLeft = windowLeft + windowWidth / 2 - popupWidth / 2 ;
+                var popupTop = windowTop + windowHeight / 2 - popupHeight / 2;
+                var popup = window.open(url, title, 'scrollbars=yes, width=' + popupWidth + ', height=' + popupHeight + ', top=' + popupTop + ', left=' + popupLeft);
+                popup.focus();
+                return true;
+            };
+       document.querySelector('.share_facebook').addEventListener('click', function(e)
+       {
+           e.preventDefault();
+           var url = this.getAttribute('data-url');
+           var shareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
+           popupCenter(shareUrl, "Partager sur facebook");
+       })
+    </script>
+{% endblock %}
+    {% block javascripts %}
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+
+            function onClickBtnLike(event){
+                event.preventDefault();
+
+                const url = this.href;
+                const spanCount = this.querySelector('span.js-LikesB');
+                const icone = this.querySelector('i');
+
+                axios.get(url).then(function(response){
+                        spanCount.textContent = response.data.LikesB;
+
+                        if(icone.classList.contains('fas'))
+                        { icone.classList.replace('fas', 'far'); }
+                        else
+                        { icone.classList.replace('far', 'fas'); }
+                    }
+                ).catch(function(error){
+
+                    window.alert("Une erreur s'est produite, reessayez plus tard.");
+                });
+            }
+
+            document.querySelectorAll('a.js-like').forEach(function(link)
+            {
+                link.addEventListener('click', onClickBtnLike);
+            })
+        </script>
+
+    {% endblock %}
+

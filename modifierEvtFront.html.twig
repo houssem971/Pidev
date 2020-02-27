@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+
+    <div class="panel-heading">
+        <h4 class="panel-title">
+
+            {{ form_start(form) }}
+
+            <div>   {{ form_row(form.nomEvt, { 'label': 'nom de l evenement', 'attr':{'class':'form-control', 'placeholder': "Ecrire ici"}}) }}
+            </div>
+            <br>
+            <div>{{ form_row(form.description, {'label': 'Description','attr':{'class':'form-control'}}) }}
+            </div>
+            <br>
+            <div>{{ form_row(form.date, {'label': 'Date','attr':{'class':'form-control'}}) }}</div>
+            <br>
+            <div>{{ form_row(form.image, {'label': 'Ajoutez une image','attr':{'class':'form-control'}}) }}</div>
+            <br>
+            <div>{{ form_row(form.categorie, {'label': 'Catégorie','attr':{'class':'form-control'}}) }}</div>
+            <br>
+            <div>{{ form_row(form.Modifier,{'label':'Modifier','attr':{'class':'btn btn-border btn-primary'}}) }}</div>
+
+            {{ form_end(form) }}
+        </h4>
+    </div>
+
+
+{% endblock %}

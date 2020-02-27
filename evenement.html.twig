@@ -1,0 +1,216 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            var searchRequest = null;
+            $("#search").keyup(function() {
+                var minlength = 3;
+                var that = this;
+                var value = $(this).val();
+                var entitySelector = $("#entitiesNav").html('');
+                if (value.length >= minlength ) {
+                    if (searchRequest != null)
+                        searchRequest.abort();
+                    searchRequest = $.ajax({
+                        type: "GET",
+                        url: "{{ path('ajax_search') }}",
+                        data: {
+                            'q' : value
+                        },
+                        dataType: "text",
+                        success: function(msg){
+                            //we need to check if the value is the same
+                         //   alert(msg);
+                            if (value==$(that).val()) {
+                                var result = JSON.parse(msg);
+                                $.each(result, function(key, arr) {
+                                    $.each(arr, function(id, value) {
+
+                                        if (key == 'posts') {//alert(msg);
+
+                                            if (id != 'error') {
+
+                                                // entitySelector.append('<li><a href="/daten/'+id+'">'+value+'</a></li>');
+                                                console.log(value[1]);
+                                                // entitySelector.append('<li><b>value[1]</b></li>');
+                                                //entitySelector.append('test');
+                                                entitySelector.append('<li><b>'+value[1]+'</b><a href="/showdet/'+id+'">'+'<img src="/uploads/images/'+value[0]+'" style="width: 50px; height: 50px"/>'+'</a></li>');
+                                            } else {
+                                                entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                            }
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <div class="page_header">
+
+        <div class="bcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="bcrumbs">
+                            <li><a href="#"><i class="fa fa-home"></i> événement</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- INNER CONTENT -->
+    <div class="inner-content">
+    <div id="navbar-collapse-2" class="navbar-collapse collapse navbar-left">
+        <div class="col-md-pull-5 shop-sidebar">
+            <div class="widget widget_product_categories">
+                <div class="clearfix"></div>
+                <ul class="product-categories">
+                    <h3>Filtre</h3>
+                    <li><i class="icon-circle-plus"></i> <a href="{{ path('eventWeek')  }}">Dans 7 Jours</a></li>
+                    <li><i class="icon-circle-plus"></i> <a href="{{ path('eventMonth')  }}">Dans un mois</a></li>
+                    <li><i class="icon-circle-plus"></i> <a href="{{ path('show')  }}">Tous</a></li>
+                    <br>
+                    <h3>Categories</h3>
+                    {% for c in catg %}
+
+                    <li><i class="icon-circle-plus"></i> <a href="{{ path('showEventCtg',{'id':c.id})  }}">{{ c.nomCtg }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+            <section id="portfolio-section">
+                <div class="input-group custom-search-form">
+                    <input type="date" id="search" class="form-control" >
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#"> <span class="fa arrow">events</span></a>
+                            <ul class="nav nav-second-level" id="entitiesNav">
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                {% for flash_message in app.session.flashbag.get('eventsupp') %}
+                <div class="alert alert-success">
+                    {{ flash_message }}
+                </div>
+                {% endfor %}
+                {% for e in event %}
+                {% if e.valide == 1 %}
+
+                <div id="portfolio-home" class="isotope gutter folio-boxed-4col">
+                    <div class="project-item photography branding">
+                        <a href="{{ path('details',{'id':e.id})  }}">
+
+                            <div class="project-gal">
+                               <!-- <img src="images/projects/1.jpg" class="img-responsive" alt="">-->
+                                <img src="{{ asset('uploads/images/' ~ e.image) }}" class="img-responsive">
+                                <div class="overlay-folio2">
+                                    <div class="project-info">
+
+                                        <h2>{{ e.nomEvt }}</h2>
+                                        <p>{{ e.description }}</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                        {% endif %}
+                    {% endfor %}
+
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <div class="navigation text-center">
+        {{ knp_pagination_render(event) }}
+    </div>
+
+
+
+
+        </div>
+
+        </section>
+
+        </div>
+        </div>
+
+
+
+
+    <!-- STYLE SWITCHER
+============================================= -->
+    <div class="b-settings-panel">
+        <div class="settings-section">
+				<span>
+					Boxed
+				</span>
+            <div class="b-switch">
+                <div class="switch-handle"></div>
+            </div>
+            <span>
+					Wide
+				</span>
+        </div>
+        <hr class="dashed" style="margin: 15px 0px;">
+        <h5>Main Background</h5>
+        <div class="settings-section bg-list">
+            <div class="bg-pattern1"></div>
+            <div class="bg-pattern2"></div>
+            <div class="bg-pattern6"></div>
+            <div class="bg-pattern10"></div>
+            <div class="bg-pattern16"></div>
+            <div class="bg-pattern4"></div>
+            <div class="bg-pattern5"></div>
+            <div class="bg-pattern7"></div>
+            <div class="bg-pattern9"></div>
+            <div class="bg-pattern11"></div>
+            <div class="bg-pattern12"></div>
+            <div class="bg-pattern13"></div>
+            <div class="bg-pattern17"></div>
+            <div class="bg-pattern8"></div>
+            <div class="bg-pattern14"></div>
+            <div class="bg-pattern15"></div>
+            <div class="bg-pattern3"></div>
+            <div class="bg-pattern18"></div>
+        </div>
+        <hr class="dashed" style="margin: 15px 0px;">
+        <h5>Color Scheme</h5>
+        <div class="settings-section color-list">
+            <div data-src="css/color-scheme/moderate-green.css" style="background: #8ec249"></div>
+            <div data-src="css/color-scheme/vivid-blue.css" style="background: #228dff"></div>
+            <div data-src="css/color-scheme/orange.css" style="background: #fa6900"></div>
+            <div data-src="css/color-scheme/brown.css" style="background: #a68c69"></div>
+            <div data-src="css/color-scheme/yellow.css" style="background: #fabe28"></div>
+            <div data-src="css/color-scheme/violet.css" style="background: #ba01ff"></div>
+            <div data-src="css/color-scheme/strong-cyan.css" style="background: #00b9bd"></div>
+            <div data-src="css/color-scheme/soft-cyan.css" style="background: #4bd5ea"></div>
+            <div data-src="css/color-scheme/red.css" style="background: #ff0104"></div>
+            <div data-src="css/color-scheme/lite-brown.css" style="background: #f3a76d"></div>
+            <div data-src="css/color-scheme/lime-green.css" style="background: #3bdbad"></div>
+            <div data-src="css/color-scheme/light-voilet.css" style="background: #aaa5ff"></div>
+            <div data-src="css/color-scheme/gray-green.css" style="background: #697060"></div>
+            <div data-src="css/color-scheme/gray-cyan.css" style="background: #aeced2"></div>
+            <div data-src="css/color-scheme/de-green.css" style="background: #b6cd71"></div>
+            <div data-src="css/color-scheme/cream.css" style="background: #e0d6b2"></div>
+
+        </div>
+        <div class="btn-settings"></div>
+    </div>
+
+  {% endblock %}
