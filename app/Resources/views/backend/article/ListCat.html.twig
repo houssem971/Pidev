@@ -1,0 +1,79 @@
+{% extends 'base2.html.twig' %}
+{% block content %}
+    <div class="page-content-wrapper">
+        <div class="page-content-wrapper-inner">
+            <div class="viewport-header">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb has-arrow">
+                        <li class="breadcrumb-item">
+                            <a href="#">Dashboard</a>
+                        </li>
+
+                        <li class="breadcrumb-item active" aria-current="page"> listes des Categories</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="content-viewport">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="grid">
+                            <p class="grid-header">Table la liste des categorie </p>
+
+                            <div class="item-wrapper">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>id Categorie</th>
+
+                                            <th>Nom Categorie</th>
+
+
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                           {% for cat in cats %}
+                                        <tr>
+                                            <td >
+                                                {{ cat.id }}
+
+                                            </td>
+
+                                            <td>{{ cat.nomCategorie }}</td>
+
+
+
+                                            <td class="actions">
+                                                <i class="mdi mdi-dots-vertical"> <a href="{{path('deleteCat',{'id': cat.id })}}"> <button class="btn btn-primary">Supprimer</button></a> <br></i>
+                                            <td>
+
+                                            </td>
+                                            <td class="actions">
+                                                <i class="mdi mdi-dots-vertical"> <a href="{{path('editCat',{'id': cat.id })}}"> <button class="btn btn-primary">Modifier</button></a> <br></i>
+                                            <td>
+
+                                            </td>
+                                            </td>
+                                        </tr>
+                                           {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content viewport ends -->
+        <!-- partial:../../partials/_footer.html -->
+
+        <!-- partial -->
+    </div>
+    <!-- page content ends -->
+    </div>
+
+{% endblock %}

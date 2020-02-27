@@ -26,12 +26,8 @@
                         <h3>Product Categories</h3>
                         <div class="clearfix"></div>
                         <ul class="product-categories">
-                            <li><i class="icon-circle-plus"></i> <a href="#">Classic</a></li>
-                            <li><i class="icon-circle-plus"></i> <a href="#">Jacket</a></li>
-                            <li><i class="icon-circle-plus"></i> <a href="#">Shirts</a></li>
-                            <li><i class="icon-circle-plus"></i> <a href="#">Posters</a></li>
-                            <li><i class="icon-circle-plus"></i> <a href="#">Leather</a></li>
-                            <li><i class="icon-circle-plus"></i> <a href="#">Shoes</a></li>
+                            <li><i class="icon-circle-plus"></i> <a href="#">{{ categorie.nomCategorie }}</a></li>
+
                         </ul>
                     </div>
                     <div class="widget">
@@ -56,10 +52,9 @@
                             <div class="gal-wrap">
                                 <div id="gal-slider" class="flexslider">
                                     <ul class="slides">
-                                        <li><img src="images/shop/1.jpg" class="img-responsive" alt="" /></li>
-                                        <li><img src="images/shop/2.jpg" class="img-responsive" alt="" /></li>
-                                        <li><img src="images/shop/3.jpg" class="img-responsive" alt="" /></li>
-                                        <li><img src="images/shop/4.jpg" class="img-responsive" alt="" /></li>
+
+
+                                        <li><img class="img-fluid rounded" src="{{ asset('uploads/post/' ~ image) }}" alt="{{ nom }}"></li>
                                     </ul>
                                 </div>
                                 <ul class="gal-nav">
@@ -87,29 +82,24 @@
                             </div>
                         </div>
                         <div class="col-md-7 product-single">
-                            <h2 class="uppercase no-margin">Green Army Jacket</h2>
+                            <h2 class="uppercase no-margin">{{ nom|upper }}</h2>
                             <div class="space10"></div>
-                            <div class="p-price">$199.99</div>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration. There are many variations of passages of Lorem Ipsum available,
-                                but the majority have suffered alteration.</p>
+                            <div class="p-price">{{ prix }} DT</div>
+                            <div >{{ date|date }}</div>
+
+                            <span class="uppercase no-margin">description: <p>{{ descripion }}</p></span><br>
                             <div class="product-quantity">
-                                <span>Quantity:</span>
-                                <form>
-                                    <input type="text" placeholder="1">
-                                </form>
-                            </div>
-                            <div class="shop-btn-wrap">
-                                <a href="#" class="button btn-small">Add to Cart</a>
-                            </div>
+
+
                             <div class="product-meta">
-									<span>Categories: <a href="#">bag</a>, <a href="#">black</a>, <a href="#">darck</a>,
-										<a href="#">sport</a>, <a href="#">ewuipment</a></span><br>
-                                <span>Tags: <a href="#">point</a>, <a href="#">size</a>, <a href="#">bike</a>, <a
-                                            href="#">bag</a>, <a href="#">black</a>, <a href="#">darck</a>, <a
-                                            href="#">sport</a>, <a href="#">ewuipment</a></span>
+									<span>Categories: <a href="#">{{ categorie.nomCategorie }}</a>
+										</span><br>
                             </div>
+
                         </div>
+                            <div class="shop-btn-wrap">
+                                <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost.dev%2F2a7_php5%2Fview%2Fafficher_wishlist.php&layout=button_count&size=small&width=83&height=20&appId" width="83" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                            </div>
                     </div>
                     <div class="clearfix space40"></div>
                     <div class="tab-style3">

@@ -17,8 +17,22 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="3c30fce3-3b1a-4dbb-a643-4e21759762d6" />
+      <executable path="composer" />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Raed" />
@@ -68,6 +82,7 @@
       <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-time-bundle" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/cboden/ratchet" />
@@ -82,6 +97,10 @@
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/ratchet/rfc6455" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+=======
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+>>>>>>> rahma
     </include_path>
   </component>
   <component name="ProjectId" id="1XAu0lq3gxd8poD4zj0YbQdrAy1" />
@@ -100,12 +119,20 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+<<<<<<< HEAD
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Raed\app\Resources\views\frontend\forum" />
+=======
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Raed\web\js" />
+>>>>>>> rahma
       <recent name="C:\wamp64\www\Raed\app\Resources\views\frontend\blog" />
       <recent name="C:\wamp64\www\Raed\app\Resources\views\frontend\evenement" />
       <recent name="C:\wamp64\www\Raed\app\Resources\views\frontend\article" />
@@ -160,6 +187,7 @@
       <workItem from="1581063807297" duration="4258000" />
       <workItem from="1581166899071" duration="2593000" />
       <workItem from="1581242167958" duration="8370000" />
+<<<<<<< HEAD
       <workItem from="1581254613459" duration="2549000" />
       <workItem from="1581260017459" duration="561000" />
       <workItem from="1581321535192" duration="775000" />
@@ -195,6 +223,28 @@
       <workItem from="1582743443865" duration="277000" />
       <workItem from="1582814690568" duration="869000" />
       <workItem from="1582828854695" duration="1268000" />
+=======
+      <workItem from="1581254613459" duration="238000" />
+      <workItem from="1581257081317" duration="4096000" />
+      <workItem from="1581339985636" duration="614000" />
+      <workItem from="1581358101551" duration="944000" />
+      <workItem from="1581509860545" duration="38603000" />
+      <workItem from="1581631288675" duration="7455000" />
+      <workItem from="1581882213429" duration="4415000" />
+      <workItem from="1581973667316" duration="29000" />
+      <workItem from="1581975555125" duration="3459000" />
+      <workItem from="1582018120103" duration="59000" />
+      <workItem from="1582050922001" duration="1724000" />
+      <workItem from="1582053409369" duration="979000" />
+      <workItem from="1582057454763" duration="11021000" />
+      <workItem from="1582119707581" duration="8040000" />
+      <workItem from="1582129741044" duration="2089000" />
+      <workItem from="1582133088372" duration="1603000" />
+      <workItem from="1582136271550" duration="104000" />
+      <workItem from="1582140136140" duration="138000" />
+      <workItem from="1582140300163" duration="6833000" />
+      <workItem from="1582200661376" duration="970000" />
+>>>>>>> rahma
     </task>
     <servers />
   </component>

@@ -1,0 +1,50 @@
+{% extends 'base2.html.twig' %}
+{% block content %}
+
+    <!-- partial -->
+    <div class="page-content-wrapper">
+        <div class="page-content-wrapper-inner">
+            <div class="viewport-header">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb has-arrow">
+                        <li class="breadcrumb-item">
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="{{path('listBack')  }}"> Liste des produits </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Produit</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="content-viewport">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="grid">
+                            <p class="grid-header">Modifier Produit</p>
+                            <div class="grid-body">
+                                <div class="item-wrapper">
+                                    <div class="row mb-3">
+                                        <div class="col-md-8 mx-auto">
+                                            <div class="form-group row showcase_row_area">
+
+                                                {{ form_start(form) }}
+
+
+
+                                                {{ form_end(form) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- partial -->
+        </div>
+        <!-- page content ends -->
+    </div>
+{% endblock %}

@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 houssem:
     resource: "@houssemBundle/Controller/"
     type:     annotation
+=======
+produit:
+    resource: "@ProduitBundle/Resources/config/routing.yml"
+>>>>>>> rahma
     prefix:   /
 
 fos_user:

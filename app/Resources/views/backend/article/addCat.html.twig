@@ -1,0 +1,57 @@
+{% extends 'base2.html.twig' %}
+{% block content %}
+
+    <!-- partial -->
+    <div class="page-content-wrapper">
+        <div class="page-content-wrapper-inner">
+            <div class="viewport-header">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb has-arrow">
+                        <li class="breadcrumb-item">
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="{{ path('ListCat') }}"> Liste Categorie </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Ajouter Categorie</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="content-viewport">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="grid">
+                            <p class="grid-header">Ajouter categorie</p>
+                            <div class="grid-body">
+                                <div class="item-wrapper">
+                                    <div class="row mb-3">
+                                        <div class="col-md-8 mx-auto">
+                                            <div class="form-group row showcase_row_area">
+                                                {{ form_start(Form) }}
+                                                <div class="col-md-3 showcase_text_area">
+                                                    <label for="inputType1">Nom</label>
+                                                </div>
+                                                <div class="col-md-9 showcase_content_area">
+                                                    {{ form_widget(Form.nomCategorie,{'attr':{'type':'text','class':'form-control','placeholder':'nom categorie...'}}) }}
+                                                </div>
+                                            </div>
+
+                                            <br><br>
+                                            {{ form_end(Form) }}
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- partial -->
+    </div>
+    <!-- page content ends -->
+    </div>
+{% endblock %}
